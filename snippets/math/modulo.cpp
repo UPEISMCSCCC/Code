@@ -28,14 +28,9 @@ ull mfac(ull n, ull m) {
 
 // if m is not guaranteed to be prime
 ll minv(ll b, ll m) {
-	if (m == 1) return 1;
-	ll swap, oldm = m, q, x = 0, y = 1;
-	while (b > 1) {
-		q = b / m;
-		swap = x, x = y - q * x, y = swap;
-		swap = m, m = b % m, b = swap;
-	}
-	return y + oldm;
+	ll x = 0, y = 0;
+	if (egcd(b, m, x, y) != 1) return -1;
+	return (x % m + m) % m;
 }
 ll mdiv_compmod(int a, int b, int m) {
 	if (__gcd(b, m) != 1) return -1;
