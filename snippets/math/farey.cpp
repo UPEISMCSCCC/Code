@@ -2,8 +2,9 @@
 #include <vector>
 #include <utility>
 
-// generates 0 <= a/b <= 1 in order, b <= n
+// generate 0 <= a/b <= 1 ordered, b <= n
 // farey(4) = 0/1 1/4 1/3 1/2 2/3 3/4 1/1
+// length is sum of phi(i) for i = 1 to n
 
 vector<pair<int, int>> farey(int n) {
 	int h = 0, k = 1, x = 1, y = 0, r;
