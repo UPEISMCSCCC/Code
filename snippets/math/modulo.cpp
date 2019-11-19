@@ -6,7 +6,7 @@
 ll mpow(ll b, ll e, ll m) {
 	ll x = 1;
 	while (e > 0) {
-		if (e % 2 == 1) x = (x * b) % m;
+		if (e % 2) x = (x * b) % m;
 		b = (b * b) % m;
 		e /= 2;
 	}
@@ -15,10 +15,8 @@ ll mpow(ll b, ll e, ll m) {
 
 ull mfac(ull n, ull m) {
 	ull f = 1;
-	for (int i = n; i > 1; i--) {
-		f = f * i;
-		f %= m;
-	}
+	for (int i = n; i > 1; i--)
+		f = (f * i) % m;
 	return f;
 }
 
