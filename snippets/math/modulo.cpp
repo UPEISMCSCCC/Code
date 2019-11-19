@@ -15,7 +15,7 @@ ll mpow(ll b, ll e, ll m) {
 
 ull mfac(ull n, ull m) {
 	ull f = 1;
-    for (int i = n; i > 1; i--) {
+	for (int i = n; i > 1; i--) {
 		f = f * i;
 		f %= m;
 	}
