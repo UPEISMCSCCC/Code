@@ -1,4 +1,4 @@
-#define MOD 1000000007
+#define MOD 1e9+7
 #define madd(a,b,m) (((a%m)+(b%m))%m)
 #define mult(a,b,m) (((a%m)*(b%m))%m)
 #define msub(a,b,m) (((a%m)-(b%m)+m)%m)
