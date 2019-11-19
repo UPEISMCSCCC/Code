@@ -1,5 +1,3 @@
-#define ll long long
-
 // Fenwick tree, array of cumulative sums - O(log n) updates, O(log n) gets
 struct Fenwick {
 	int n;
