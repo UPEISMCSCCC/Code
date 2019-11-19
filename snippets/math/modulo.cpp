@@ -1,7 +1,3 @@
-#include <algorithm>
-#define ll long long
-#define ull unsigned long long
-
 #define MOD 1000000007
 #define madd(a,b,m) (((a%m)+(b%m))%m)
 #define mult(a,b,m) (((a%m)*(b%m))%m)

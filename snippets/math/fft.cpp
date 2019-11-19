@@ -1,6 +1,3 @@
-#include <complex>
-#include <vector>
-
 #define cd complex<double>
 const double PI = acos(-1);
 

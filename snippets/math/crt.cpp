@@ -1,5 +1,3 @@
-#define ll long long
-
 bool ecrt(ll* r, ll* m, int n, ll& re, ll& mo) {
 	ll x, y, d; mo = m[0]; re = r[0];
 	for (int i = 1; i < n; i++) {

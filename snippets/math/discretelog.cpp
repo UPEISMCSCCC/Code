@@ -1,8 +1,3 @@
-#include <unordered_map>
-#include <cmath>
-
-#define ll long long
-
 unordered_map<int, int> dlogc;
 int discretelog(int a, int b, int m) {
 	dlogc.clear();

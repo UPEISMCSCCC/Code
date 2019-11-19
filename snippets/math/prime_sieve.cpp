@@ -1,4 +1,3 @@
-#include <bitset>
 bitset<100000001> sieve;
 
 // generate sieve - O(n log n)

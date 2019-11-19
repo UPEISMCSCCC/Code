@@ -1,5 +1,3 @@
-#define ull unsigned long long
-
 // Miller-Rabin primality test - O(10 log^3 n)
 bool isPrime(ull n) {
 	if (n < 2) return false;

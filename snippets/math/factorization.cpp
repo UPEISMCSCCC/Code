@@ -1,7 +1,3 @@
-#include <vector>
-#include <algorithm>
-#define ll long long
-
 // do not call directly
 ll pollard_rho(ll n, ll s) {
 	ll x, y;

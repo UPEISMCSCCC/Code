@@ -1,8 +1,4 @@
-#include <ext/rope>
-using namespace __gnu_cxx;
-
 // O(log n) insert, delete, concatenate
-
 int main() {
 	// generate rope
 	rope<int> v;
