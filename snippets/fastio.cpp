@@ -13,9 +13,9 @@ void readn(int& n) {
 	n *= s;
 }
 
-void readn(double& n) {
+void readn(long double& n) {
 	char c; n = 0;
-	double m = 0, o = 1; bool d = false; int s = 1;
+	long double m = 0, o = 1; bool d = false; int s = 1;
 	if ((c = getchar_unlocked()) == '-') s = -1;
 	else if (c == '.') d = true;
 	else n = c - '0';
@@ -26,7 +26,9 @@ void readn(double& n) {
 	}
 	n = s * (n + m * o);
 }
-
+void readn(double& n) {
+	long double m; readn(m); n = m;
+}
 void readn(float& n) {
-	double m; readn(m); n = m;
+	long double m; readn(m); n = m;
 }
