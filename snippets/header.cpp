@@ -4,9 +4,7 @@
 
 // include everything
 #include <bits/stdc++.h>
-#include <ext/rope>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
+#include <bits/extc++.h>
 
 // namespaces
 using namespace std;
