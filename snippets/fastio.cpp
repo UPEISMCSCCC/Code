@@ -12,3 +12,21 @@ void readn(int& n) {
 		n = n * 10 + c - '0';
 	n *= s;
 }
+
+void readn(double& n) {
+	char c; n = 0;
+	double m = 0, o = 1; bool d = false; int s = 1;
+	if ((c = getchar_unlocked()) == '-') s = -1;
+	else if (c == '.') d = true;
+	else n = c - '0';
+	while ((c = getchar_unlocked()) != ' ' && c != '\n') {
+		if (c == '.') d = true;
+		else if (d) { m = m * 10 + c - '0'; o *= 0.1; }
+		else n = n * 10 + c - '0';
+	}
+	n = s * (n + m * o);
+}
+
+void readn(float& n) {
+	double m; readn(m); n = m;
+}
