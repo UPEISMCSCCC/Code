@@ -1,7 +1,7 @@
 #define MOD 1000000007
 #define madd(a,b,m) (a+b-((a+b-m>=0)?m:0))
 #define mult(a,b,m) ((ull)a*b%m)
-#define msub(a,b,m) (a-b+((a-b<0)?m:0))
+#define msub(a,b,m) (a-b+((a<b)?m:0))
 
 ll mpow(ll b, ll e, ll m) {
 	ll x = 1;
