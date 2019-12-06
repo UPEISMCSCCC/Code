@@ -1,3 +1,1 @@
-ull lcm(ull a, ull b) {
-	return (a * b) / __gcd(a, b);
-}
+#define lcm(a,b) ((a*b)/__gcd(a,b))
