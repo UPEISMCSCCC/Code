@@ -39,8 +39,7 @@ void readn(string& s) {
         s += c;
 }
 
-void printn(unsigned int& n) {
-    if (n / 10) 
-        printn(n / 10); 
+void printn(unsigned int n) {
+    if (n / 10) printn(n / 10); 
     putchar_unlocked(n % 10 + '0');
 }
