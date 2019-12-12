@@ -17,3 +17,37 @@ C++ is the default language used here. Sometimes unique features of C++ is used,
 * [Ordered Set](./snippets/data_structures/ordered_set.cpp) - version of std::set with array-like access methods
 * [Rope](./snippets/data_structures/rope.cpp) - version of string, optimized for arbitrary insertions/deletions
 * [Trie](./snippets/data_structure/trie.cpp) - prefix tree
+
+### Graph
+
+* [Union Find](./snippets/graph/union_find.cpp) - determine subsets that nodes belong to
+
+### Math
+
+* [Catalan](./snippets/math/catalan.cpp) - generate the catalan numbers under a modulus
+* [nCr](./snippets/math/combinatorics.cpp) - number of combinations, either whole or under a modulo
+* [nPr](./snippets/math/combinatorics.cpp) - number of permutations, either whole or under a modulo
+* [Chinese Remainder Theorem](./snippets/math/crt.cpp) - extended chinese remainder theorem
+* [Discrete Logarithm](./snippets/math/discretelog.cpp) - logarithm based on modulus
+* [Euler Phi](./snippets/math/euler_totient.cpp) - positive integers up to `n` that are relatively prime to `n`
+* [Kamenetsky's Formula](./snippets/math/factorial.cpp) - approximate number of digits of a factorial
+* [Stirling's Approximation](./snippets/math/factorial.cpp) - approximation of a factorial
+* [Log Factorial](./snippets/math/factorial.cpp) - natural log of a factorial computed very quickly
+* [Prime Factorization](./snippets/math/factorization.cpp) - quickly find the prime factorization of a number using Pollard Rho
+* [Farey Sequence](./snippets/math/farey.cpp) - generate a list of increasing fractions from 0/1 to 1/1
+* [Fast Fourier Transform](./snippets/math/fft.cpp) - calculate the Discrete Fourier transform of a polynomial quickly
+* [Polynomial Multiplication](./snippets/math/fft.cpp) - quickly calculate the multiplication of two polynomials using the fft
+* [Extended Greatest Common Denominator](./snippets/math/gcd.cpp) - Extended Euclidean algorithm, given `a` and `b` calculates `x, y, gcd(a, b)` in `ax + by = gcd(a, b)`
+* [Lowest Common Multiple](./snippets/math/lcm.cpp) - calculated the lcm of two numbers
+* [Modulo Math](./snippets/math/modulo.cpp) - modular addition, multiplication, division, subtraction, powers, factorials, and inverses
+* [Miller-Rabin Primality Test](./snippets/math/prime_check.cpp) - quick probabilistic test whether a number is prime or not
+* [Sieve of Eratosthenes](./snippets/math/prime_sieve.cpp) - generate a prime sieve to allow for very fast lookups whether a number is prime or not
+* [Simpson's Rule](./snippets/math/simpsons.cpp) - approximation of an integral of a function
+* [Equation Solver](./snippets/math/solve_equations.cpp) - solve quadratic and cubic functions
+
+### String
+
+* [Number Converter](./snippets/string/int_to_english.cpp) - convert an integer into its english equivalent
+* [Longest Common Prefix](./snippets/string/lcp.cpp) - sort-based method of determining the longest prefix shared among all elements in an array
+* [Longest Common Subsequence](./snippets/string/lcs.cpp) - dynamic programming solution for finding the longest subsequence shared between two strings
+* [Subsequence Count](./snippets/string/subsequence.cpp) - dynamic programming solution for counting the number of times a string appears as a subsequence in a larger string
