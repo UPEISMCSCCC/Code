@@ -18,3 +18,9 @@ ull nCr(ull n, ull r) {
 		v = v * (n-r+i) /i;
 	return (ull)(v + 0.001);
 }
+
+// requires modulo math
+// can optimize by precomputing mfac and minv-mfac
+ull nCr(ull n, ull r, ull m) {
+	return mfac(n, m) * minv(mfac(k, m), m) % m * minv(mfac(n-k, m), m) % m;
+}
