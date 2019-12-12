@@ -43,3 +43,7 @@ void printn(unsigned int n) {
     if (n / 10) printn(n / 10); 
     putchar_unlocked(n % 10 + '0');
 }
+void printn(int n) {
+    if (n < 0) { putchar_unlocked('-'); n *= -1; }
+    printn((unsigned int)n);
+}
