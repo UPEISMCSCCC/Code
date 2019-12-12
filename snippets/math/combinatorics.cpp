@@ -1,3 +1,4 @@
+// can optimize by precomputing factorials, and fact[n]/fact[n-r]
 ull nPr(ull n, ull r) {
 	ull v = 1;
 	for (ull i = n-r+1; i <= n; i++)

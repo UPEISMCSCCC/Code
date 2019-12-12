@@ -1,7 +1,6 @@
 string lcs(string a, string b) {
 	int m = a.length(), n = b.length();
 	
-	// build matrix / L[m][n] contains length of lcs
 	int L[m+1][n+1];
 	for (int i = 0; i <= m; i++) {
 		for (int j = 0; j <= n; j++) {
@@ -10,8 +9,8 @@ string lcs(string a, string b) {
 			else L[i][j] = max(L[i-1][j], L[i][j-1]);
 		}
 	}
+	// return L[m][n]; // length of lcs
 	
-	// obtain string
 	string out = "";
 	int i = m - 1, j = n - 1;
 	while (i >= 0 && j >= 0) {
