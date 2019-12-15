@@ -25,18 +25,20 @@ C++ is the default language used here. Sometimes unique features of C++ is used,
 ### Math
 
 * [Catalan](./snippets/math/catalan.cpp) - generate the catalan numbers under a modulus
-* [nCr](./snippets/math/combinatorics.cpp) - number of combinations, either whole or under a modulo
-* [nPr](./snippets/math/combinatorics.cpp) - number of permutations, either whole or under a modulo
+* [Combinatorics](./snippets/math/combinatorics.cpp) - functions related to combinatorics
+* * [nCr](./snippets/math/combinatorics.cpp) - number of combinations, either whole or under a modulo
+* * [nPr](./snippets/math/combinatorics.cpp) - number of permutations, either whole or under a modulo
 * [Chinese Remainder Theorem](./snippets/math/crt.cpp) - extended chinese remainder theorem
 * [Discrete Logarithm](./snippets/math/discretelog.cpp) - logarithm based on modulus
 * [Euler Phi](./snippets/math/euler_totient.cpp) - positive integers up to `n` that are relatively prime to `n`
-* [Kamenetsky's Formula](./snippets/math/factorial.cpp) - approximate number of digits of a factorial
-* [Stirling's Approximation](./snippets/math/factorial.cpp) - approximation of a factorial
-* [Log Factorial](./snippets/math/factorial.cpp) - natural log of a factorial computed very quickly
+* [Factorials](./snippets/math/factorial.cpp) - Quick methods for calculating factorials
+* * [Kamenetsky's Formula](./snippets/math/factorial.cpp) - approximate number of digits of a factorial
+* * [Stirling's Approximation](./snippets/math/factorial.cpp) - approximation of a factorial
+* * [Log Factorial](./snippets/math/factorial.cpp) - natural log of a factorial computed very quickly
 * [Prime Factorization](./snippets/math/factorization.cpp) - quickly find the prime factorization of a number using Pollard Rho
 * [Farey Sequence](./snippets/math/farey.cpp) - generate a list of increasing fractions from 0/1 to 1/1
 * [Fast Fourier Transform](./snippets/math/fft.cpp) - calculate the Discrete Fourier transform of a polynomial quickly
-* [Polynomial Multiplication](./snippets/math/fft.cpp) - quickly calculate the multiplication of two polynomials using the fft
+* * [Polynomial Multiplication](./snippets/math/fft.cpp) - quickly calculate the multiplication of two polynomials using the fft
 * [Extended Greatest Common Denominator](./snippets/math/gcd.cpp) - Extended Euclidean algorithm, given `a` and `b` calculates `x, y, gcd(a, b)` in `ax + by = gcd(a, b)`
 * [Lowest Common Multiple](./snippets/math/lcm.cpp) - calculated the lcm of two numbers
 * [Modulo Math](./snippets/math/modulo.cpp) - modular addition, multiplication, division, subtraction, powers, factorials, and inverses
