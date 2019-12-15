@@ -8,15 +8,15 @@ C++ is the default language used here. Sometimes unique features of C++ is used,
 
 ### Algorithms
 
-* [QuickSelect](./snippets/algorithm/quickselect.cpp) - Search for an element in an unsorted array, similar to a binary search but without the sorted restriction. Effectively performs quicksort, but only on the relevant subsections of the array.
+* [QuickSelect](./snippets/algorithm/quickselect.cpp) - Search for an element in an unsorted array, similar to a binary search but without the sorted restriction. Effectively performs quicksort, but only on the relevant subsections of the array. This does swap elements within the array and will alter the array's ordering.
 
 ### Data Structures
 
-* [Fenwick Tree](./snippets/data_structures/fenwick.cpp) - efficient structure for keeping track of and updating cumulative sums.
+* [Fenwick Tree](./snippets/data_structures/fenwick.cpp) - efficient structure for keeping track of and updating cumulative sums. Updates sums in `O(log n)`
 * [Hash Table](./snippets/data_structures/hashtable.cpp) - faster version of std::unordered_map
 * [Ordered Set](./snippets/data_structures/ordered_set.cpp) - version of std::set with array-like access methods
-* [Rope](./snippets/data_structures/rope.cpp) - version of string, optimized for arbitrary insertions/deletions
-* [Trie](./snippets/data_structure/trie.cpp) - prefix tree
+* [Rope](./snippets/data_structures/rope.cpp) - version of string, optimized for insertions/deletions at arbitrary points within the string.
+* [Trie](./snippets/data_structure/trie.cpp) - prefix tree, or a tree that stores strings based on common prefixes.
 
 ### Graph
 
