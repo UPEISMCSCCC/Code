@@ -1,8 +1,8 @@
 # Code
 
-This repo contains various bits of code that can be used for competitive programming. Some relatively difficult problems can only be solved using these data structures or algorithms.
+This repo contains various bits of code that can be used for competitive programming. Some relatively difficult problems can only be solved using these data structures or algorithms. Readability is a concern, but reducing lines of code is prioritized for use in cheat sheets / team notebooks.
 
-C++ is the default language used here. Sometimes unique features of C++ is used, but generally it can be converted to other languages without much hassle.
+C++ is the default language used here. This choice here is that C++ is usually the fastest language in common use for competitive programming, and that usually C++ can be translated into other languages while the opposite is not necessarily true. Sometimes unique features of C++ is used, but generally it can be converted to other languages without much hassle.
 
 ## Information
 
