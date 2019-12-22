@@ -52,4 +52,5 @@ C++ is the default language used here. This choice here is that C++ is usually t
 * [Number Converter](./snippets/string/int_to_english.cpp) - convert an integer into its english equivalent
 * [Longest Common Prefix](./snippets/string/lcp.cpp) - sort-based method of determining the longest prefix shared among all elements in an array
 * [Longest Common Subsequence](./snippets/string/lcs.cpp) - dynamic programming solution for finding the longest subsequence shared between two strings
+* [Longest Palindrome Substring](./snippets/string/manacher.cpp) - Manacher's algorithm for finding the palindrome length of every substring of a given string
 * [Subsequence Count](./snippets/string/subsequence.cpp) - dynamic programming solution for counting the number of times a string appears as a subsequence in a larger string
