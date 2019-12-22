@@ -51,6 +51,7 @@ C++ is the default language used here. This choice here is that C++ is usually t
 
 * [Number Converter](./snippets/string/int_to_english.cpp) - convert an integer into its english equivalent
 * Find Substrings - algorithms for finding occurences of a substring within a larger string
+* * [Aho-Corasick](./snippets/string/aho_corasick.cpp) - search for multiple patterns/keywords at once, using automata
 * * [Boyer-Moore](./snippets/string/boyer_moore.cpp) - suited for larger sets like english text
 * * [KMP](./snippets/string/kmp.cpp) - suited for small sets like numbers / DNA
 * [Longest Common Prefix](./snippets/string/lcp.cpp) - sort-based method of determining the longest prefix shared among all elements in an array
