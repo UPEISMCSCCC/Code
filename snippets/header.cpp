@@ -19,4 +19,5 @@ using namespace __gnu_pbds; // tree/trie
 #define i128 __int128
 #define u128 unsigned i128
 
+// global variables
 mt19937 rng((uint32_t)chrono::steady_clock::now().time_since_epoch().count());
