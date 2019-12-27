@@ -9,6 +9,7 @@ C++ is the default language used here. This choice here is that C++ is usually t
 ### Algorithms
 
 * [QuickSelect](./snippets/algorithm/quickselect.cpp) - Search for an element in an unsorted array, similar to a binary search but without the sorted restriction. Effectively performs quicksort, but only on the relevant subsections of the array. This does swap elements within the array and will alter the array's ordering.
+* [Ternary Search](./snippets/algorithm/ternary_search.cpp) - Given a function, search for the minimum or maximum (or any other unimodal function) of a range. Will do so in `O(log3 n)` where `n` is the range being used.
 
 ### Data Structures
 
