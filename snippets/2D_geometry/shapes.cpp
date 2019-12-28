@@ -7,6 +7,17 @@ struct circle { point c; double r; };
 struct triangle { point a, b, c; };
 struct rectangle { point tl, br; };
 
+struct convex_polygon {
+	vector<point> points;
+	convex_polygon(triangle a) {
+		points.push_back(a.a); points.push_back(a.b); points.push_back(a.c);
+	};
+	convex_polygon(rectangle a) {
+		points.push_back(a.tl); points.push_back({real(a.tl), imag(a.br)});
+		points.push_back(a.br); points.push_back({real(a.br), imag(a.tl)});
+	}
+};
+
 #define sq(a) ((a)*(a))
 double circumference(circle a) { return 2 * a.r * M_PI; }
 double area(circle a) { return sq(a.r) * M_PI; }
