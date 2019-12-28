@@ -16,3 +16,8 @@ point3d cross(point3d a, point3d b) { return {a.y*b.z - a.z*b.y, a.z*b.x - a.x*b
 struct line3d { point3d a, b; };
 struct plane { double a, b, c, d; } // a*x + b*y + c*z + d = 0
 struct sphere { point3d c; double r; };
+
+#define sq(a) ((a)*(a))
+#define cb(a) ((a)*(a)*(a))
+double surface(circle a) { return 4 * sq(a.r) * M_PI; }
+double volume(circle a) { return 4.0/3.0 * cb(a.r) * M_PI; }
