@@ -9,3 +9,6 @@ struct point3d {
 	double abs() { return sqrt(norm()); }
 	point3d normalize() { return *this / this->abs(); }
 };
+
+double dot(point3d a, point3d b) { return a.x*b.x + a.y*b.y + a.z*b.z; }
+point3d cross(point3d a, point3d b) { return {a.y*b.z - a.z*b.y, a.z*b.x - a.x*b.z, a.x*b.y - a.y*b.x}; };
