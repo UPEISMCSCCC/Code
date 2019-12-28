@@ -39,6 +39,16 @@ void readn(string& s) {
         s += c;
 }
 
+bool readline(string& s) {
+    char c; s = "";
+    while(c = getchar_unlocked()) {
+        if (c == '\n') return true;
+        if (c == EOF) return false;
+        s += c;
+    }
+    return false;
+}
+
 void printn(unsigned int& n) {
     if (n / 10) 
         printn(n / 10); 
