@@ -11,4 +11,7 @@ struct point3d {
 };
 
 double dot(point3d a, point3d b) { return a.x*b.x + a.y*b.y + a.z*b.z; }
-point3d cross(point3d a, point3d b) { return {a.y*b.z - a.z*b.y, a.z*b.x - a.x*b.z, a.x*b.y - a.y*b.x}; };
+point3d cross(point3d a, point3d b) { return {a.y*b.z - a.z*b.y, a.z*b.x - a.x*b.z, a.x*b.y - a.y*b.x}; }
+
+struct line3d { point3d a, b; };
+struct sphere { point3d c; double r; };
