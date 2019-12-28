@@ -7,6 +7,7 @@ struct circle { point c; double r; };
 struct triangle { point a, b, c; };
 
 #define sq(a) ((a)*(a))
+double circumference(circle a) { return 2 * a.r * M_PI; }
 double area(circle a) { return sq(a.r) * M_PI; }
 double intersection(circle a, circle b) {
 	double d = abs(a.c - b.c);
