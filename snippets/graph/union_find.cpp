@@ -1,7 +1,3 @@
-struct subset {
-	int p, rank;
-};
-
 int uf_find(subset* s, int i) {
 	if (s[i].p != i) s[i].p = uf_find(s, s[i].p);
 	return s[i].p;
