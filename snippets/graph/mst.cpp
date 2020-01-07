@@ -17,16 +17,13 @@ vector<edge> mst(vector<vector<edge>> graph, ll &total) {
     bitset<20001> marked; // change size as needed
     marked[0] = 1;
     for (edge ep : graph[0]) pq.push(ep);
-    edge e;
-    int u,v,w,chosen;
     while(MST.size()!=graph.size()-1 && pq.size()!=0) {
-        e = pq.top(); pq.pop();
-        u = e.u, v = e.v, w = e.w;
+        edge e = pq.top(); pq.pop();
+        int u = e.u, v = e.v, w = e.w;
         if(marked[u] && marked[v]) continue;
-        else if(marked[u]) chosen=v;
-        else chosen=u;
-        for(edge ep : graph[chosen]) pq.push(ep);
-        marked[chosen] = 1;
+        else if(marked[u]) swap(u, v);
+        for(edge ep : graph[u]) pq.push(ep);
+        marked[u] = 1;
         MST.push_back(e);
         total += e.w;
     }
