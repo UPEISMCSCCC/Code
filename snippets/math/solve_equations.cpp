@@ -30,3 +30,33 @@ vector<double> solveEq(double a, double b, double c, double d) {
 	}
 	return res;
 }
+
+// m = # equations, n = # variables, a[m][n+1] = coefficient matrix
+// a[i][0]x + a[i][1]y + ... + a[i][n]z = a[i][n+1]
+const double eps = 1e-7;
+bool zero(double a) { return (a < eps) && (a > -eps); }
+vector<double> solveEq(double **a, int m, int n) {
+	int cur = 0;
+	for (int i = 0; i < n; i++) {
+		for (int j = cur; j < m; j++) {
+			if (!zero(a[j][i])) {
+				if (j != cur) swap(a[j], a[cur]);
+				for (int sat = 0; sat < m; sat++) {
+					if (sat == cur) continue;
+					double num = a[sat][i] / a[cur][i];
+					for (int sot = 0; sot <= n; sot++)
+						a[sat][sot] -= a[cur][sot] * num;
+				}
+				cur++;
+				break;
+			}
+		}
+	}
+	for (int j = cur; j < m; j++)
+		if (!zero(a[j][n])) return vector<double>();
+	vector<double> ans(n,0);
+	for (int i = 0, sat = 0; i < n; i++)
+		if (sat < m && !zero(a[sat][i]))
+			ans[i] = a[sat][n] / a[sat++][i];
+	return ans;
+}
