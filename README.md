@@ -21,6 +21,7 @@ C++ is the default language used here. This choice here is that C++ is usually t
 
 ### Graph
 
+* [Eulerian Path](./snippets/graph/eulerian_path.cpp) - find a path that visits each node exactly once, if it exists
 * [Minimum Spanning Tree](./snippets/graph/mst.cpp) - Primm's algorithm for generating the minimum spanning tree of a given graph and its weight
 * [Union Find](./snippets/graph/union_find.cpp) - determine subsets that nodes belong to
 
