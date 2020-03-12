@@ -1,0 +1,6 @@
+# ignore middle steps for latex
+*.aux
+*.log
+*.out
+*.listing
+*.toc
