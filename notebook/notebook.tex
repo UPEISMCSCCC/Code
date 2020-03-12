@@ -1,0 +1,68 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\geometry{a4paper,
+		  lmargin=0.3cm,
+		  rmargin=0.3cm,
+		  tmargin=2.0cm,
+		  bmargin=2.0cm}
+
+% font setup
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{anyfontsize}
+
+% paragraph formatting
+\setlength{\parskip}{0.75em}
+\setlength{\parindent}{1.0em}
+\usepackage{indentfirst}
+
+% code snippet setup
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=none,
+  language=C++,
+  aboveskip=0mm,
+  belowskip=0mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=false,
+  breakindent=1,
+  tabsize=1,
+  postbreak=\mbox{\textcolor{red}{\tiny{$\hookrightarrow$}}\space}
+}
+
+\usepackage{changepage}
+\usepackage{multicol}
+\setlength{\columnsep}{1pt}
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{gray}}
+
+% support links
+\usepackage{hyperref}
+
+\begin{document}
+
+% TEXT
+\begin{multicols}{3}
+
+\tableofcontents
+\section{General}
+\subsection{Header}
+\lstinputlisting{../snippets/header.cpp}
+\subsection{Fast IO}
+\lstinputlisting{../snippets/fastio.cpp}
+
+\end{multicols}
+
+\end{document}
