@@ -61,8 +61,10 @@
 \titlespacing\section{0pt}{1pt}{0pt}
 \titlespacing\subsection{0pt}{1pt}{0pt}
 \titlespacing\subsubsection{0pt}{1pt}{0pt}
-\definecolor{headerBG}{rgb}{0.8, 0.8, 0.8}
-\definecolor{subheaderBG}{rgb}{0.92, 0.92, 0.92}
+\titleformat*{\section}{\large\bfseries}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\definecolor{headerBG}{rgb}{0.75, 0.75, 0.75}
+\definecolor{subheaderBG}{rgb}{0.9, 0.9, 0.9}
 \newcommand{\bgsection}[1]{\begin{tcolorbox}[colback=headerBG,size=minimal]\section{#1}\end{tcolorbox}}
 \newcommand{\bgsubsection}[1]{\begin{tcolorbox}[colback=subheaderBG,size=minimal]\subsection{#1}\end{tcolorbox}}
 \usepackage{tcolorbox}
@@ -155,7 +157,7 @@
 \lstinputlisting{../snippets/math/prime_sieve.cpp}
 \bgsubsection{Simpson's / Approximate Integrals}
 \lstinputlisting{../snippets/math/simpsons.cpp}
-\bgsubsection{Solve Common Equations}
+\bgsubsection{Common Equations Solvers}
 \lstinputlisting{../snippets/math/solve_equations.cpp}
 
 \bgsection{Graph}
