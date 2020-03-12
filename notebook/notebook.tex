@@ -1,11 +1,11 @@
-\documentclass[10pt]{article}
+\documentclass[landscape, 10pt]{article}
 
 \usepackage{geometry}
 \geometry{a4paper,
-		  lmargin=0.3cm,
-		  rmargin=0.3cm,
-		  tmargin=2.0cm,
-		  bmargin=2.0cm}
+		  lmargin=0.75cm,
+		  rmargin=0.75cm,
+		  tmargin=0.75cm,
+		  bmargin=0.75cm}
 
 % font setup
 \usepackage[T1]{fontenc}
@@ -53,10 +53,13 @@
 \usepackage{hyperref}
 \setcounter{tocdepth}{1}
 
+% page setup
+\pagenumbering{gobble}
+
 \begin{document}
 
 % TEXT
-\begin{multicols}{3}
+\begin{multicols}{4}
 
 \tableofcontents
 \section{General}
@@ -64,6 +67,18 @@
 \lstinputlisting{../snippets/header.cpp}
 \subsection{Fast IO}
 \lstinputlisting{../snippets/fastio.cpp}
+
+\section{Algorithms}
+\subsection{Min/Max Subarray}
+\lstinputlisting{../snippets/algorithm/minmax_subarray.cpp}
+\subsection{Quickselect}
+\lstinputlisting{../snippets/algorithm/quickselect.cpp}
+\subsection{Saddleback Search}
+\lstinputlisting{../snippets/algorithm/saddleback_search.cpp}
+\subsection{Ternary Search}
+\lstinputlisting{../snippets/algorithm/ternary_search.cpp}
+
+
 
 \end{multicols}
 
