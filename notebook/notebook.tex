@@ -37,19 +37,21 @@
   stringstyle=\color{mauve},
   breaklines=true,
   breakatwhitespace=false,
-  breakindent=1,
+  breakindent=0pt,
   tabsize=1,
-  postbreak=\mbox{\textcolor{red}{\tiny{$\hookrightarrow$}}\space}
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
 }
 
+% column setup
 \usepackage{changepage}
 \usepackage{multicol}
-\setlength{\columnsep}{1pt}
+\setlength{\columnsep}{1mm}
 \setlength{\columnseprule}{0.5pt}
 \def\columnseprulecolor{\color{gray}}
 
-% support links
+% table of contents setup
 \usepackage{hyperref}
+\setcounter{tocdepth}{1}
 
 \begin{document}
 
