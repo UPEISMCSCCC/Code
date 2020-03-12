@@ -11,6 +11,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{anyfontsize}
+\usepackage{xcolor}
 
 % paragraph formatting
 \setlength{\parskip}{0.75em}
@@ -52,6 +53,19 @@
 % table of contents setup
 \usepackage{hyperref}
 \setcounter{tocdepth}{1}
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{1pt}
+
+% header setup
+\usepackage{titlesec}
+\titlespacing\section{0pt}{1pt}{0pt}
+\titlespacing\subsection{0pt}{1pt}{0pt}
+\titlespacing\subsubsection{0pt}{1pt}{0pt}
+\definecolor{headerBG}{rgb}{0.8, 0.8, 0.8}
+\definecolor{subheaderBG}{rgb}{0.92, 0.92, 0.92}
+\newcommand{\bgsection}[1]{\begin{tcolorbox}[colback=headerBG,size=minimal]\section{#1}\end{tcolorbox}}
+\newcommand{\bgsubsection}[1]{\begin{tcolorbox}[colback=subheaderBG,size=minimal]\subsection{#1}\end{tcolorbox}}
+\usepackage{tcolorbox}
 
 % page setup
 \pagenumbering{gobble}
@@ -62,96 +76,96 @@
 \begin{multicols}{4}
 
 \tableofcontents
-\section{General}
-\subsection{Header}
+\bgsection{General}
+\bgsubsection{Header}
 \lstinputlisting{../snippets/header.cpp}
-\subsection{Fast IO}
+\bgsubsection{Fast IO}
 \lstinputlisting{../snippets/fastio.cpp}
 
-\section{Algorithms}
-\subsection{Min/Max Subarray}
+\bgsection{Algorithms}
+\bgsubsection{Min/Max Subarray}
 \lstinputlisting{../snippets/algorithm/minmax_subarray.cpp}
-\subsection{Quickselect}
+\bgsubsection{Quickselect}
 \lstinputlisting{../snippets/algorithm/quickselect.cpp}
-\subsection{Saddleback Search}
+\bgsubsection{Saddleback Search}
 \lstinputlisting{../snippets/algorithm/saddleback_search.cpp}
-\subsection{Ternary Search}
+\bgsubsection{Ternary Search}
 \lstinputlisting{../snippets/algorithm/ternary_search.cpp}
 
-\section{Data Structures}
-\subsection{Fenwick Tree}
+\bgsection{Data Structures}
+\bgsubsection{Fenwick Tree}
 \lstinputlisting{../snippets/data_structures/fenwick.cpp}
-\subsection{Hashtable}
+\bgsubsection{Hashtable}
 \lstinputlisting{../snippets/data_structures/hashtable.cpp}
-\subsection{Ordered Set}
+\bgsubsection{Ordered Set}
 \lstinputlisting{../snippets/data_structures/ordered_set.cpp}
-\subsection{Rope}
+\bgsubsection{Rope}
 \lstinputlisting{../snippets/data_structures/rope.cpp}
-\subsection{Trie}
+\bgsubsection{Trie}
 \lstinputlisting{../snippets/data_structures/trie.cpp}
 
-\section{String}
-\subsection{Aho Corasick}
+\bgsection{String}
+\bgsubsection{Aho Corasick}
 \lstinputlisting{../snippets/string/aho_corasick.cpp}
-\subsection{Boyer Moore}
+\bgsubsection{Boyer Moore}
 \lstinputlisting{../snippets/string/boyer_moore.cpp}
-\subsection{English Conversion}
+\bgsubsection{English Conversion}
 \lstinputlisting{../snippets/string/int_to_english.cpp}
-\subsection{Knuth Morris Pratt}
+\bgsubsection{Knuth Morris Pratt}
 \lstinputlisting{../snippets/string/kmp.cpp}
-\subsection{Longest Common Prefix}
+\bgsubsection{Longest Common Prefix}
 \lstinputlisting{../snippets/string/lcp.cpp}
-\subsection{Longest Common Subsequence}
+\bgsubsection{Longest Common Subsequence}
 \lstinputlisting{../snippets/string/lcs.cpp}
-\subsection{Longest Common Substring}
+\bgsubsection{Longest Common Substring}
 \lstinputlisting{../snippets/string/manacher.cpp}
-\subsection{Subsequence Count}
+\bgsubsection{Subsequence Count}
 \lstinputlisting{../snippets/string/subsequence.cpp}
 
-\section{Math}
-\subsection{Catalan Numbers}
+\bgsection{Math}
+\bgsubsection{Catalan Numbers}
 \lstinputlisting{../snippets/math/catalan.cpp}
-\subsection{Combinatorics (nCr, nPr)}
+\bgsubsection{Combinatorics (nCr, nPr)}
 \lstinputlisting{../snippets/math/combinatorics.cpp}
-\subsection{Chinese Remainder Theorem}
+\bgsubsection{Chinese Remainder Theorem}
 \lstinputlisting{../snippets/math/crt.cpp}
-\subsection{Count Digit Occurences}
+\bgsubsection{Count Digit Occurences}
 \lstinputlisting{../snippets/math/digitcount.cpp}
-\subsection{Discrete Logarithm}
+\bgsubsection{Discrete Logarithm}
 \lstinputlisting{../snippets/math/discretelog.cpp}
-\subsection{Euler Phi / Totient}
+\bgsubsection{Euler Phi / Totient}
 \lstinputlisting{../snippets/math/euler_totient.cpp}
-\subsection{Factorials}
+\bgsubsection{Factorials}
 \lstinputlisting{../snippets/math/factorial.cpp}
-\subsection{Prime Factorization}
+\bgsubsection{Prime Factorization}
 \lstinputlisting{../snippets/math/factorization.cpp}
-\subsection{Farey Fractions}
+\bgsubsection{Farey Fractions}
 \lstinputlisting{../snippets/math/farey.cpp}
-\subsection{Fast Fourier Transform}
+\bgsubsection{Fast Fourier Transform}
 \lstinputlisting{../snippets/math/fft.cpp}
-\subsection{Greatest Common Denominator}
+\bgsubsection{Greatest Common Denominator}
 \lstinputlisting{../snippets/math/gcd.cpp}
-\subsection{Least Common Multiple}
+\bgsubsection{Least Common Multiple}
 \lstinputlisting{../snippets/math/lcm.cpp}
-\subsection{Modulo Operations}
+\bgsubsection{Modulo Operations}
 \lstinputlisting{../snippets/math/modulo.cpp}
-\subsection{Miller-Rabin Primality Test}
+\bgsubsection{Miller-Rabin Primality Test}
 \lstinputlisting{../snippets/math/prime_check.cpp}
-\subsection{Sieve of Eratosthenes}
+\bgsubsection{Sieve of Eratosthenes}
 \lstinputlisting{../snippets/math/prime_sieve.cpp}
-\subsection{Simpson's / Approximate Integrals}
+\bgsubsection{Simpson's / Approximate Integrals}
 \lstinputlisting{../snippets/math/simpsons.cpp}
-\subsection{Solve Common Equations}
+\bgsubsection{Solve Common Equations}
 \lstinputlisting{../snippets/math/solve_equations.cpp}
 
-\section{Graph}
-\subsection{Setup}
+\bgsection{Graph}
+\bgsubsection{Setup}
 \lstinputlisting{../snippets/graph/basics.cpp}
-\subsection{Eulerian Path}
+\bgsubsection{Eulerian Path}
 \lstinputlisting{../snippets/graph/eulerian_path.cpp}
-\subsection{Minimum Spanning Tree}
+\bgsubsection{Minimum Spanning Tree}
 \lstinputlisting{../snippets/graph/mst.cpp}
-\subsection{Union Find}
+\bgsubsection{Union Find}
 \lstinputlisting{../snippets/graph/union_find.cpp}
 
 
