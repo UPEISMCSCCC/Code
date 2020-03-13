@@ -43,6 +43,7 @@ C++ is the default language used here. This choice here is that C++ is usually t
 * [Fast Fourier Transform](./snippets/math/fft.cpp) - calculate the Discrete Fourier transform of a polynomial quickly
 * * [Polynomial Multiplication](./snippets/math/fft.cpp) - quickly calculate the multiplication of two polynomials using the fft
 * [Extended Greatest Common Denominator](./snippets/math/gcd.cpp) - Extended Euclidean algorithm, given `a` and `b` calculates `x, y, gcd(a, b)` in `ax + by = gcd(a, b)`
+* [Josephus Problem](./snippets/math/josephus.cpp) - last remaining spot in a circle, where each spot removes another spot a certain distance from it. Both supports arbitrary distance, and a fast case if distance is 2 (the traditional Josephus problem).
 * [Lowest Common Multiple](./snippets/math/lcm.cpp) - calculated the lcm of two numbers
 * [Modulo Math](./snippets/math/modulo.cpp) - modular addition, multiplication, division, subtraction, powers, factorials, and inverses
 * [Miller-Rabin Primality Test](./snippets/math/prime_check.cpp) - quick probabilistic test whether a number is prime or not
