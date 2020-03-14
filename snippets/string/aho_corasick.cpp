@@ -1,5 +1,5 @@
 // range of alphabet for automata to consider
-// MAXC = 26, OFFC = 'a' if only lowercase letters
+// MAXC = 26, OFFC = 'a' if only lowercase
 const int MAXC = 256;
 const int OFFC = 0;
 

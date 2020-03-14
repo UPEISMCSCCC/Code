@@ -1,6 +1,6 @@
-// < for max, > for min, or any other unimodal func
+// < max, > min, or any other unimodal func
 #define TERNCOMP(a,b) (a)<(b)
-int ternary_search(int a, int b, int (*f)(int)) {
+int ternsearch(int a, int b, int (*f)(int)) {
 	while (b-a > 4) {
 		int m = (a+b)/2;
 		if (TERNCOMP((*f)(m), (*f)(m+1))) a = m;
@@ -13,7 +13,7 @@ int ternary_search(int a, int b, int (*f)(int)) {
 }
 
 #define TERNPREC 0.000001
-double ternary_search(double a, double b, double (*f)(double)) {
+double ternsearch(double a, double b, double (*f)(double)) {
 	while (b-a > TERNPREC * 4) {
 		double m = (a+b)/2;
 		if (TERNCOMP((*f)(m), (*f)(m + TERNPREC))) a = m;

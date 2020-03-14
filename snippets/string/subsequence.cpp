@@ -1,4 +1,4 @@
-// O(m*n) - "banana", "ban" >> 3 (ban, ba..n, b..an)
+// "banana", "ban" >> 3 (ban, ba..n, b..an)
 ull subsequences(string body, string subs) {
 	int m = subs.length(), n = body.length();
 	if (m > n) return 0;
