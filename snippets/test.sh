@@ -5,4 +5,3 @@ for i in *.in; do
 	./a.exe < $i > "$f.out"
 	diff -b -q "$f.ans" "$f.out"
 done
-echo "done"
