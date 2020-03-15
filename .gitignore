@@ -4,3 +4,5 @@
 *.out
 *.listing
 *.toc
+*.pygtex
+*.pygstyle
