@@ -21,7 +21,7 @@
 
 % code snippet setup, comment out one or the other
 \input{commands_listings}
-%\input{commands_minted}
+%\input{commands_minted} % requires `pip install Pygments`
 
 % column setup
 \usepackage{changepage}
@@ -61,7 +61,7 @@
 \tableofcontents
 \bgsection{General}
 \bgsubsection{test.sh}
-\inputcpp{../snippets/test.sh}
+\inputbash{../snippets/test.sh}
 \bgsubsection{Header}
 \inputcpp{../snippets/header.cpp}
 \bgsubsection{Fast IO}

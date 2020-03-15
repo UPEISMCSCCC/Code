@@ -21,4 +21,12 @@
   postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
 }
 
-\newcommand{\inputcpp}[1]{\lstinputlisting{#1}}
+\lstdefinestyle{StyleCPP}{language=C++}
+\lstdefinestyle{StylePython}{language=Python}
+\lstdefinestyle{StyleJava}{language=Java}
+\lstdefinestyle{StyleBash}{language=Bash}
+
+\newcommand{\inputcpp}[1]{\lstinputlisting[style=StyleCPP]{#1}}
+\newcommand{\inputpython}[1]{\lstinputlisting[style=StylePython]{#1}}
+\newcommand{\inputjava}[1]{\lstinputlisting[style=StyleJava]{#1}}
+\newcommand{\inputbash}[1]{\lstinputlisting[style=StyleBash]{#1}}
