@@ -1,8 +1,10 @@
 \usepackage{minted}
 
+\def \precodevspace {-1mm}
+\def \postcodevspace {-3mm}
 \definecolor{tabcolor}{rgb}{0.85,0.85,0.85}
 
-\newcommand{\inputcpp}[1]{\vspace{-3mm}\inputminted[
+\newcommand{\inputcpp}[1]{\vspace{\precodevspace}\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
@@ -12,10 +14,11 @@
   tab=.,
   tabcolor=tabcolor,
   tabsize=1,
-  stripall=true
-]{cpp}{#1}\vspace{-5mm}}
+  stripall=true,
+  baselinestretch=0.825
+]{cpp}{#1}\vspace{\postcodevspace}}
 
-\newcommand{\inputpython}[1]{\vspace{-3mm}\inputminted[
+\newcommand{\inputpython}[1]{\vspace{\precodevspace}\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
@@ -25,10 +28,11 @@
   tab=.,
   tabcolor=tabcolor,
   tabsize=1,
-  stripall=true
-]{python}{#1}\vspace{-5mm}}
+  stripall=true,
+  baselinestretch=0.825
+]{python}{#1}\vspace{\postcodevspace}}
 
-\newcommand{\inputjava}[1]{\vspace{-3mm}\inputminted[
+\newcommand{\inputjava}[1]{\vspace{\precodevspace}\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
@@ -38,10 +42,11 @@
   tab=.,
   tabcolor=tabcolor,
   tabsize=1,
-  stripall=true
-]{java}{#1}\vspace{-5mm}}
+  stripall=true,
+  baselinestretch=0.825
+]{java}{#1}\vspace{\postcodevspace}}
 
-\newcommand{\inputbash}[1]{\vspace{-3mm}\inputminted[
+\newcommand{\inputbash}[1]{\vspace{\precodevspace}\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
@@ -51,5 +56,6 @@
   tab=.,
   tabcolor=tabcolor,
   tabsize=1,
-  stripall=true
-]{bash}{#1}\vspace{-5mm}}
+  stripall=true,
+  baselinestretch=0.825
+]{bash}{#1}\vspace{\postcodevspace}}
