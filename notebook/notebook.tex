@@ -20,8 +20,10 @@
 \usepackage{indentfirst}
 
 % code snippet setup, comment out one or the other
-\input{commands_listings}
-%\input{commands_minted} % requires `pip install Pygments`
+% listings is more lower quality, but doesn't have external dependencies
+% minted is better, but requires `pip install Pygments`
+\input{commands_minted}
+%\input{commands_listings}
 
 % column setup
 \usepackage{changepage}
