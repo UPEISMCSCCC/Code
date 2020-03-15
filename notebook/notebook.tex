@@ -19,8 +19,9 @@
 \setlength{\parindent}{1.0em}
 \usepackage{indentfirst}
 
-% code snippet setup
+% code snippet setup, comment out one or the other
 \input{commands_listings}
+%\input{commands_minted}
 
 % column setup
 \usepackage{changepage}
@@ -60,7 +61,7 @@
 \tableofcontents
 \bgsection{General}
 \bgsubsection{test.sh}
-\lstinputlisting{../snippets/test.sh}
+\inputcpp{../snippets/test.sh}
 \bgsubsection{Header}
 \inputcpp{../snippets/header.cpp}
 \bgsubsection{Fast IO}
