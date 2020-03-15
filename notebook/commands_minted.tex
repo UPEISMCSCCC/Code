@@ -1,29 +1,55 @@
 \usepackage{minted}
 
+\definecolor{tabcolor}{rgb}{0.85,0.85,0.85}
+
 \newcommand{\inputcpp}[1]{\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
-  tabsize=1
+  breakbefore=./\,\_,
+  breakautoindent=false,
+  showtabs=true,
+  tab=.,
+  tabcolor=tabcolor,
+  tabsize=1,
+  stripall=true
 ]{cpp}{#1}}
 
 \newcommand{\inputpython}[1]{\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
-  tabsize=1
+  breakbefore=./\,\_,
+  breakautoindent=false,
+  showtabs=true,
+  tab=.,
+  tabcolor=tabcolor,
+  tabsize=1,
+  stripall=true
 ]{python}{#1}}
 
 \newcommand{\inputjava}[1]{\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
-  tabsize=1
+  breakbefore=./\,\_,
+  breakautoindent=false,
+  showtabs=true,
+  tab=.,
+  tabcolor=tabcolor,
+  tabsize=1,
+  stripall=true
 ]{java}{#1}}
 
 \newcommand{\inputbash}[1]{\inputminted[
   fontsize=\footnotesize,
   breaklines=true,
   breakindent=0pt,
-  tabsize=1
+  breakbefore=./\,\_,
+  breakautoindent=false,
+  showtabs=true,
+  tab=.,
+  tabcolor=tabcolor,
+  tabsize=1,
+  stripall=true
 ]{bash}{#1}}
