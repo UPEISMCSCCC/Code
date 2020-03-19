@@ -31,6 +31,16 @@ vector<double> solveEq(double a, double b, double c, double d) {
 	return res;
 }
 
+// linear diophantine equation ax + by = c, find x and y
+// infinite solutions of form x+k*b/g, y-k*a/g
+bool solveEq(ll a, ll b, ll c, ll &x, ll &y, ll &g) {
+	g = egcd(abs(a), abs(b), x, y);
+	if (c % g) return false;
+	x *= c / g * ((a < 0) ? -1 : 1);
+	y *= c / g * ((b < 0) ? -1 : 1);
+	return true;
+}
+
 // m = # equations, n = # variables, a[m][n+1] = coefficient matrix
 // a[i][0]x + a[i][1]y + ... + a[i][n]z = a[i][n+1]
 const double eps = 1e-7;
