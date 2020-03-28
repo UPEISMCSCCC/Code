@@ -37,9 +37,18 @@ struct polygon {
 	}
 };
 
-// line methods
-double lengthsq(line a) { return sq(real(a.a) - real(a.b)) + sq(imag(a.a) - imag(a.b)); }
-double length(line a) { return sqrt(lengthsq(a)); }
+// triangle methods
+double area_heron(double a, double b, double c) {
+	if (a < b) swap(a, b);
+	if (a < c) swap(a, c);
+	if (b < c) swap(b, c);
+	if (a > b + c) return -1;
+	return sqrt((a+b+c)*(c-a+b)*(c+a-b)*(a+b-c)/16.0);
+}
+
+// segment methods
+double lengthsq(segment a) { return sq(real(a.a) - real(a.b)) + sq(imag(a.a) - imag(a.b)); }
+double length(segment a) { return sqrt(lengthsq(a)); }
 
 // circle methods
 double circumference(circle a) { return 2 * a.r * M_PI; }
