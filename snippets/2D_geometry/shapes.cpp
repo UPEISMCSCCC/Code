@@ -13,6 +13,7 @@ struct rectangle { point tl, br; };
 
 struct convex_polygon {
 	vector<point> points;
+	convex_polygon(vector<point> points) : points(points) {}
 	convex_polygon(triangle a) {
 		points.push_back(a.a); points.push_back(a.b); points.push_back(a.c);
 	};
@@ -24,6 +25,7 @@ struct convex_polygon {
 
 struct polygon {
 	vector<point> points;
+	polygon(vector<point> points) : points(points) {}
 	polygon(triangle a) {
 		points.push_back(a.a); points.push_back(a.b); points.push_back(a.c);
 	}
