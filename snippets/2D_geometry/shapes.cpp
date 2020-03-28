@@ -1,4 +1,7 @@
 #define point complex<double>
+#define sq(a) ((a)*(a))
+#define cb(a) ((a)*(a)*(a))
+
 double dot(point a, point b) { return real(conj(a)*b); }
 double cross(point a, point b) { return imag(conj(a)*b); }
 
@@ -33,7 +36,18 @@ struct polygon {
 	}
 };
 
-#define sq(a) ((a)*(a))
+double lengthsq(line a) { return sq(real(a.a) - real(a.b)) + sq(imag(a.a) - imag(a.b)); }
+double length(line a) { return sqrt(lengthsq(a)); }
+// -1 coincide, 0 parallel, 1 intersection
+int intersection(line a, line b, point& p) {
+	if (abs(cross(a.b - a.a, b.b - b.a)) > EPS) {
+		p = cross(b.a - a.a, b.b - a.b) / cross(a.b - a.a, b.b - b.a) * (b - a) + a;
+		return 1;
+	}
+	if (abs(cross(a.b - a.a, a.b - b.a)) > EPS) return 0;
+	return -1;
+}
+
 double circumference(circle a) { return 2 * a.r * M_PI; }
 double area(circle a) { return sq(a.r) * M_PI; }
 double intersection(circle a, circle b) {
@@ -48,24 +62,24 @@ double intersection(circle a, circle b) {
 // -1 outside, 0 inside, 1 tangent, 2 intersection
 int intersection(circle a, circle b, vector<point>& inter) {
 	double d2 = norm(b.c - a.c), rS = a.r + b.r, rD = a.r - b.r;
-	if (d2 > rS * rS) return -1;
-	if (d2 < rD * rD) return 0;
+	if (d2 > sq(rS)) return -1;
+	if (d2 < sq(rD)) return 0;
 	double ca = 0.5 * (1 + rS * rD / d2);
-	point z = point(ca, sqrt(a.r * a.r / d2 - ca * ca));
+	point z = point(ca, sqrt(sq(a.r) / d2 - sq(ca)));
 	inter.push_back(a.c + (b.c - a.c) * z);
 	if (abs(imag(z)) > EPS) inter.push_back(a.c + (b.c - a.c) * conj(z));
 	return inter.size();
 }
 vector<point> intersection(line a, circle c) {
 	vector<point> inter;
-	c.c -= a;
-	b -= a;
-	point m = b * real(c.c / b);
+	c.c -= a.a;
+	a.b -= a.a;
+	point m = a.b * real(c.c / a.b);
 	double d2 = norm(m - c.c);
-	if (d2 > c.r * c.r) return 0;
-	double l = sqrt((c.r * c.r - d2) / norm(b));
-	inter.push_back(a + m + l * b);
-	if (abs(l) > EPS) inter.push_back(a + m - l * b);
+	if (d2 > sq(c.r)) return 0;
+	double l = sqrt((sq(c.r) - d2) / norm(a.b));
+	inter.push_back(a.a + m + l * a.b);
+	if (abs(l) > EPS) inter.push_back(a.a + m - l * a.b);
 	return inter;
 }
 
@@ -76,6 +90,6 @@ double intersection(rectangle a, rectangle b) {
 }
 double width(rectangle a) { return abs(real(a.br) - real(a.tl)); }
 double height(rectangle a) { return abs(imag(a.br) - real(a.tl)); }
-double diagonal(rectangle a) { return sqrt(width(a) * width(a) + height(a) * height(a)); }
+double diagonal(rectangle a) { return sqrt(sq(width(a)) + sq(height(a))); }
 double area(rectangle a) { return width(a) * height(a); }
 double perimeter(rectangle a) { return 2 * (width(a) + height(a)); }
