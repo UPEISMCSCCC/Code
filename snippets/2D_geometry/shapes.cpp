@@ -51,3 +51,8 @@ double intersection(rectangle a, rectangle b) {
 	double x2 = min(real(a.br), real(b.br)), y2 = min(imag(a.br), imag(b.br));
 	return (x2 <= x1 || y2 <= y1) ? 0 : (x2-x1)*(y2-y1);
 }
+double width(rectangle a) { return abs(real(a.br) - real(a.tl)); }
+double height(rectangle a) { return abs(imag(a.br) - real(a.tl)); }
+double diagonal(rectangle a) { return sqrt(width(a) * width(a) + height(a) * height(a)); }
+double area(rectangle a) { return width(a) * height(a); }
+double perimeter(rectangle a) { return 2 * (width(a) + height(a)); }
