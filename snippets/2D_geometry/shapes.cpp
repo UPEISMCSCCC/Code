@@ -60,3 +60,14 @@ double height(rectangle a) { return abs(imag(a.br) - real(a.tl)); }
 double diagonal(rectangle a) { return sqrt(sq(width(a)) + sq(height(a))); }
 double area(rectangle a) { return width(a) * height(a); }
 double perimeter(rectangle a) { return 2 * (width(a) + height(a)); }
+// check if `a` fit's inside `b`
+// swap equalities to exclude tight fits
+bool doesFitInside(rectangle a, rectangle b) {
+	int x = width(a), w = width(b), y = height(a), h = height(b);
+	if (x > y) swap(x, y);
+	if (w > h) swap(w, h);
+	if (w < x) return false;
+	if (y <= h) return true;
+	double a=sq(y)-sq(x), b=x*h-y*w, c=x*w-y*h;
+	return sq(a) <= sq(b) + sq(c);
+}
