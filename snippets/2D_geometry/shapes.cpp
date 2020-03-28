@@ -71,3 +71,18 @@ bool doesFitInside(rectangle a, rectangle b) {
 	double a=sq(y)-sq(x), b=x*h-y*w, c=x*w-y*h;
 	return sq(a) <= sq(b) + sq(c);
 }
+
+// polygon methods
+// get both area and centroid
+pair<double, point> area(polygon a) {
+	int n = a.points.size();
+	double area = 0;
+	point c(0, 0);
+	for 9int i = n - 1, j = 0; j < n; i = j++) {
+		double a = cross(a.points[i], a.points[j]) / 2;
+		area += a;
+		c += (a.points[i] + a.points[j]) * (a / 3);
+	}
+	c /= area;
+	return {c, area};
+}
