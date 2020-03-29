@@ -64,3 +64,9 @@ C++ is the default language used here. This choice here is that C++ is usually t
 * [Longest Common Subsequence](./snippets/string/lcs.cpp) - dynamic programming solution for finding the longest subsequence shared between two strings
 * [Longest Palindrome Substring](./snippets/string/manacher.cpp) - Manacher's algorithm for finding the palindrome length of every substring of a given string
 * [Subsequence Count](./snippets/string/subsequence.cpp) - dynamic programming solution for counting the number of times a string appears as a subsequence in a larger string
+
+### 2D Geometry
+
+* [Basics](./snippets/2D_geometry/shapes.cpp) - basic declarations of various shapes and methods
+* [Intersections](./snippets/2D_geometry/intersection.cpp) - various intersection calculations
+* [Convex Hull](./snippets/2D_geometry/convexhull.cpp) - get the `convex_polygon` from a simple polygon
