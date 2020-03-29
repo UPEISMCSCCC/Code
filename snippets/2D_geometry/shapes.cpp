@@ -1,4 +1,5 @@
 #define point complex<double>
+#define EPS 0.0000001
 #define sq(a) ((a)*(a))
 #define cb(a) ((a)*(a)*(a))
 

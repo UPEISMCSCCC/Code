@@ -63,6 +63,10 @@
 % make lines very small
 \renewcommand{\baselinestretch}{0.01}
 
+% text setup
+\usepackage{tabularx}
+\setlength\tabcolsep{2.0pt}
+
 \begin{document}
 
 % TEXT
@@ -183,6 +187,16 @@
 \inputcpp{../snippets/optimization/snoob.cpp}
 \bgsubsection{Powers}
 \inputcpp{../snippets/optimization/is_power.cpp}
+
+\bgsection{Text}
+\bgsubsection{Limits}
+\begin{tabularx}{\textwidth}{l|r|r|l}
+int & $\pm 2147483647$ & $\pm 2^{31}-1$ & $10^9$ \\
+uint & $4294967295$ & $2^{32}-1$ & $10^9$ \\
+ll & $\pm 9223372036854775807$ & $\pm 2^{63}-1$ & $10^{18}$ \\
+ull & $18446744073709551615$ & $2^{64}-1$ & $10^{19}$
+\end{tabularx}
+
 
 \end{multicols*}
 
