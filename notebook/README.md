@@ -20,3 +20,6 @@ Because of this:
 - https://github.com/foreverbell/acm-icpc-cheat-sheet
 - https://github.com/erfaniaa/doggy-sweat-cheatsheet
 - https://github.com/likecs/Competitive-Coding
+
+Specific:
+- n-dimensional vectors: https://codeforces.com/blog/entry/76149
