@@ -18,8 +18,16 @@ Because of this:
 - https://github.com/jaehyunp/stanfordacm
 - https://github.com/SuprDewd/CompetitiveProgramming
 - https://github.com/foreverbell/acm-icpc-cheat-sheet
-- https://github.com/erfaniaa/doggy-sweat-cheatsheet
-- https://github.com/likecs/Competitive-Coding
+- https://cp-algorithms.com/
 
 Specific:
 - n-dimensional vectors: https://codeforces.com/blog/entry/76149
+
+TODO:
+- https://github.com/lzyrapx/algorithmic_template
+- https://github.com/kskun/OI-Templates
+- https://github.com/billyang2016/oi-template
+- https://github.com/VastoLorde95/Competitive-Programming/tree/master/Library
+- https://github.com/matthewsamuel95/ACM-ICPC-Algorithms
+- https://github.com/erfaniaa/doggy-sweat-cheatsheet
+- https://github.com/likecs/Competitive-Coding
