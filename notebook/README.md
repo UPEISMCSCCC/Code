@@ -31,3 +31,9 @@ TODO:
 - https://github.com/matthewsamuel95/ACM-ICPC-Algorithms
 - https://github.com/erfaniaa/doggy-sweat-cheatsheet
 - https://github.com/likecs/Competitive-Coding
+- https://github.com/ADJA/algos
+- https://github.com/xdanielsb/MarathonBook
+- https://github.com/xdanielsb/Notebook
+- https://github.com/asmaurya95/Competitive-Programming
+- https://github.com/tmadeira/icpc-reference
+- https://github.com/jnikhilreddy/Competitive-programming-resources
