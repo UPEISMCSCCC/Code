@@ -37,3 +37,7 @@ TODO:
 - https://github.com/asmaurya95/Competitive-Programming
 - https://github.com/tmadeira/icpc-reference
 - https://github.com/jnikhilreddy/Competitive-programming-resources
+- https://github.com/spaghetti-source/algorithm
+- https://github.com/ngthanhtrung23/ACM_Notebook_new
+- https://github.com/bobogei81123/bcw_codebook
+- http://shygypsy.com/tools/
