@@ -37,7 +37,7 @@
 % column setup
 \usepackage{changepage}
 \usepackage{multicol}
-\setlength{\columnsep}{1mm}
+\setlength{\columnsep}{0.5mm}
 \setlength{\columnseprule}{0.5pt}
 \def\columnseprulecolor{\color{gray}}
 
@@ -76,7 +76,11 @@
 % TEXT
 \begin{multicols*}{4}
 
+\begin{minipage}{\columnwidth}
+\begin{multicols}{2}
 \tableofcontents
+\end{multicols}
+\end{minipage}
 
 \bgsection{General}
 \bgsubsection{run.sh}
@@ -100,7 +104,7 @@
 \bgsubsection{Ternary Search}
 \inputcpp{../snippets/algorithm/ternary_search.cpp}
 
-\bgsection{Data Structures}
+\bgsection{Structures}
 \bgsubsection{Fenwick Tree}
 \inputcpp{../snippets/data_structures/fenwick.cpp}
 \bgsubsection{Hashtable}
@@ -114,7 +118,7 @@
 \bgsubsection{Trie}
 \inputcpp{../snippets/data_structures/trie.cpp}
 
-\bgsection{String}
+\bgsection{Strings}
 \bgsubsection{Aho Corasick}
 \inputcpp{../snippets/string/aho_corasick.cpp}
 \bgsubsection{Boyer Moore}
@@ -170,7 +174,7 @@
 \bgsubsection{Common Equations Solvers}
 \inputcpp{../snippets/math/solve_equations.cpp}
 
-\bgsection{Graph}
+\bgsection{Graphs}
 \inputcpp{../snippets/graph/basics.cpp}
 \bgsubsection{Eulerian Path}
 \inputcpp{../snippets/graph/eulerian_path.cpp}
