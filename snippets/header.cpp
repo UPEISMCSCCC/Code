@@ -15,7 +15,7 @@ using namespace __gnu_pbds; // tree/trie
 // common defines
 #define fastio ios_base::sync_with_stdio(0);cin.tie(0);
 #define nostacklim rlimit RZ;getrlimit(3,&RZ);RZ.rlim_cur=-1;setrlimit(3,&RZ);
-#define DEBUG(v) cout<<"DEBUG: "<<#v<<" = "<<v<<'\n';
+#define DEBUG(v) cerr<<__LINE__<<": "<<#v<<" = "<<v<<'\n';
 #define ll long long
 #define ull unsigned ll
 #define i128 __int128
