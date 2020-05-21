@@ -81,11 +81,11 @@ pair<double, point> area(polygon a) {
 	int n = a.points.size();
 	double area = 0;
 	point c(0, 0);
-	for 9int i = n - 1, j = 0; j < n; i = j++) {
-		double a = cross(a.points[i], a.points[j]) / 2;
-		area += a;
-		c += (a.points[i] + a.points[j]) * (a / 3);
+	for (int i = n - 1, j = 0; j < n; i = j++) {
+		double v = cross(a.points[i], a.points[j]) / 2;
+		area += v;
+		c += (a.points[i] + a.points[j]) * (v / 3);
 	}
 	c /= area;
-	return {c, area};
+	return {area, c};
 }
