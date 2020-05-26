@@ -6,3 +6,5 @@
 *.toc
 *.pygtex
 *.pygstyle
+*.bbl
+*.blg
