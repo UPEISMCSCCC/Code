@@ -3,7 +3,6 @@
 #define putchar_unlocked(x) _putchar_nolock(x)
 #endif
 
-
 void read(unsigned int& n) {
 	char c; n = 0;
 	while ((c=getchar_unlocked())!=' '&&c!='\n')
