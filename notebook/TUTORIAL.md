@@ -83,3 +83,20 @@ This is intended to be run during contest prep. If the contest judge reports bac
 ## Judge Error Codes
 
 This function is made for contest prep to see what sort of error messages you will get when your program is wrong. To test each potential error code, simply run the function by passing in whatever error code you want to check.
+
+## GCC Builtin Docs
+
+These consist of documentation for GCC specific extensions and implementations that would not be available in the language documentation provided in most contests.
+
+```cpp
+__int128 a;
+unsigned __int128 b;
+```
+
+These are types that provide greater precision than 64-bit types, which are normally the largest available in C++. Unfortunately IO doesn't support these types, so they have to either be cast or have each digit read/printed manually.
+
+```cpp
+__float128 c;
+```
+
+Like the above types, this type provides greater precision than other floating point types (`double` being 64-bit and `long double` being 80-bit). It should likely be cast to `long double` when printing, and its extra precision used for intermediary calculations.
