@@ -100,3 +100,19 @@ __float128 c;
 ```
 
 Like the above types, this type provides greater precision than other floating point types (`double` being 64-bit and `long double` being 80-bit). It should likely be cast to `long double` when printing, and its extra precision used for intermediary calculations.
+
+```cpp
+__lg(n);
+```
+
+This function quickly calculates the floor of `log2(n)`.
+
+```cpp
+__builtin_popcount(n); // number of 1 bits
+__builtin_ctz(n);      // trailing 0 bits
+__builtin_clz(n);      // leading 0 bits
+__builtin_ffs(n);      // least significant 1 bit index
+__builtin_parity(n);   // number of 1 bits mod 2
+```
+
+These functions provide some information a 32-bit number. There are equivalents for 64-bit types, in the form of `__builtin_popcountll(n)` where `ll` is at the end of the function name.
