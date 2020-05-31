@@ -18,6 +18,7 @@ Because of this:
 - https://github.com/jaehyunp/stanfordacm
 - https://github.com/SuprDewd/CompetitiveProgramming
 - https://github.com/foreverbell/acm-icpc-cheat-sheet
+- https://github.com/bqi343/USACO
 - https://cp-algorithms.com/
 
 Specific:
