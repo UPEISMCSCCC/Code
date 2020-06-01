@@ -1,4 +1,5 @@
 // L,R = interval [L,R], in = {{l,r}, index}
+// does not handle case where L == R
 vector<int> intervalCover(double L, double R, vector<pair<pair<double,double>,int>> in) {
     int i = 0; pair<double,int> pos = {L,-1}; vector<int> a;
     sort(begin(in), end(in));
