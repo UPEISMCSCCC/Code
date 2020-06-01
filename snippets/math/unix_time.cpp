@@ -15,14 +15,12 @@ vector<int> toDate(ull epoch) {
 	return {t.tm_year+1900,t.tm_mon,t.tm_mday,t.tm_hour,t.tm_min,t.tm_sec};
 }
 
-// 0-6, 0 = sunday
 int getWeekday(ull epoch) {
 	time_t e=epoch; struct tm t=*localtime(&e);
-	return t.tm_wday;
+	return t.tm_wday; // 0-6, 0 = sunday
 }
 
-// 0-365
 int getDayofYear(ull epoch) {
 	time_t e=epoch; struct tm t=*localtime(&e);
-	return t.tm_yday;
+	return t.tm_yday; // 0-365
 }
