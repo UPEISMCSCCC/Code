@@ -20,3 +20,9 @@ int getWeekday(ull epoch) {
 	time_t e=epoch; struct tm t=*localtime(&e);
 	return t.tm_wday;
 }
+
+// 0-365
+int getDayofYear(ull epoch) {
+	time_t e=epoch; struct tm t=*localtime(&e);
+	return t.tm_yday;
+}
