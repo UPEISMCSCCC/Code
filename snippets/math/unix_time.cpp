@@ -9,3 +9,8 @@ ull toEpoch(int year, int month, int day, int hour, int minute, int second) {
 	epoch = mktime(&t);
 	return (ull)epoch;
 }
+
+vector<int> toDate(ull epoch) {
+	time_t e=epoch; struct tm t=*localtime(&e);
+	return {t.tm_year+1900,t.tm_mon,t.tm_mday,t.tm_hour,t.tm_min,t.tm_sec};
+}
