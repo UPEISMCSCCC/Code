@@ -224,32 +224,8 @@
 \inputcpp{../snippets/contest/extra_docs.cpp}
 
 \bgsubsection{Limits}
-\begin{tabularx}{\textwidth}{l|r|r|l}
-int & $\pm 2147483647$ & $\pm 2^{31}-1$ & $10^9$ \\
-uint & $4294967295$ & $2^{32}-1$ & $10^9$ \\
-ll & $\pm 9223372036854775807$ & $\pm 2^{63}-1$ & $10^{18}$ \\
-ull & $18446744073709551615$ & $2^{64}-1$ & $10^{19}$ \\
-i128 & $\pm 170141183460469231...$ & $\pm 2^{127}-1$ & $10^{38}$ \\
-u128 & $340282366920938463...$ & $2^{128}-1$ & $10^{38}$
-\end{tabularx}
-
-\hrulefill
-
-Complexity classes input size (per second):
-
-\vspace{0.2pt}
-
-\begin{tabularx}{\textwidth}{p{0.76\linewidth} r}
-$O(n^n)$ or $O(n!)$ & $n \leq 10$ \\
-$O(2^n)$ &  $n \leq 30$ \\
-$O(n^3)$ & $n \leq 1000$ \\
-$O(n^2)$ & $n \leq 30000$ \\
-$O(n \sqrt{n})$ & $n \leq 10^6$ \\
-$O(n$ log $n)$ & $n \leq 10^7$ \\
-$O(n)$ & $n < 10^9$
-\end{tabularx}
-
-\hrulefill
+\input{figures/limits}
+\input{figures/complexity_classes}
 
 \end{multicols*}
 
