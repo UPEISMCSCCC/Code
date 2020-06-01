@@ -71,6 +71,11 @@
 \usepackage{tabularx}
 \setlength\tabcolsep{1.0pt}
 
+% list setup
+\usepackage{enumitem}
+\setlist{nolistsep}
+\renewcommand{\labelitemi}{-\hspace{-4pt}}
+
 \begin{document}
 
 % TEXT
@@ -218,7 +223,8 @@
 \bgsection{Additional}
 \bgsubsection{Judge Speed}
 \inputcpp{../snippets/contest/time_comparison.cpp}
-\bgsubsection{Judge Error Codes}
+\bgsubsection{Judge Pre-Contest Checks}
+\input{figures/platform_checks}
 \inputcpp{../snippets/contest/judge_failures.cpp}
 \bgsubsection{GCC Builtin Docs}
 \inputcpp{../snippets/contest/extra_docs.cpp}
