@@ -24,3 +24,10 @@ int getDayofYear(ull epoch) {
 	time_t e=epoch; struct tm t=*localtime(&e);
 	return t.tm_yday; // 0-365
 }
+
+const int months[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+bool validDate(int year, int month, int day) {
+    bool leap = !(year%(year%25?4:16));
+    if (month >= 12) return false;
+    return day <= months[month] + (leap && month == 1);
+}
