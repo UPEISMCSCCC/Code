@@ -8,3 +8,13 @@ vector<int> gen_permutation(int c, int n) {
 		idx.erase(idx.begin() + fac[i]);
 	return per;
 }
+
+// get what nth permutation of vector
+int get_permutation(vector<int>& v) {
+	int use = 0, i = 1, r = 0;
+	for (int e : v) {
+		r = r * i++ + __builtin_popcount(use & -(1<<e));
+		use |= 1 << e;
+	}
+	return r;
+}
