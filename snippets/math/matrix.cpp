@@ -15,6 +15,15 @@ struct Mat : public Vec<2, T> {
 				(*this)[i][j] -= m[i][j];
 		return *this;
 	}
+	Mat<T> operator*(const Mat<T>& m) {
+	    Mat<T> z(w,m.h);
+	    for (int i = 0; i < w; i++)
+	        for (int j = 0; j < h; j++)
+	            for (int k = 0; k < m.h; k++)
+	                z[i][k] += (*this)[i][j] * m[j][k];
+	   return z;
+	}
 	Mat<T> operator+(const Mat<T>& m) { Mat<T> a=*this; return a+=m; }
 	Mat<T> operator-(const Mat<T>& m) { Mat<T> a=*this; return a-=m; }
+	Mat<T>& operator*=(const Mat<T>& m) { return *this = (*this)*m; }
 };
