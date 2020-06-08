@@ -26,4 +26,9 @@ struct Mat : public Vec<2, T> {
 	Mat<T> operator+(const Mat<T>& m) { Mat<T> a=*this; return a+=m; }
 	Mat<T> operator-(const Mat<T>& m) { Mat<T> a=*this; return a-=m; }
 	Mat<T>& operator*=(const Mat<T>& m) { return *this = (*this)*m; }
+	Mat<T> power(int n) {
+	    Mat<T> a = Mat<int>::identity(w),m=*this;
+	    for (;n;n/=2,m*=m) if (n&1) a *= m;
+	    return a;
+	}
 };
