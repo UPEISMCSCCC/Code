@@ -43,6 +43,7 @@ bool solveEq(ll a, ll b, ll c, ll &x, ll &y, ll &g) {
 
 // m = # equations, n = # variables, a[m][n+1] = coefficient matrix
 // a[i][0]x + a[i][1]y + ... + a[i][n]z = a[i][n+1]
+// find a solution of some kind to linear equation
 const double eps = 1e-7;
 bool zero(double a) { return (a < eps) && (a > -eps); }
 vector<double> solveEq(double **a, int m, int n) {
@@ -69,4 +70,55 @@ vector<double> solveEq(double **a, int m, int n) {
 		if (sat < m && !zero(a[sat][i]))
 			ans[i] = a[sat][n] / a[sat++][i];
 	return ans;
+}
+
+// solve A[n][n] * x[n] = b[n] linear equation
+// rank < n is multiple solutions, -1 is no solutions
+// `alls` is whether to find all solutions, or any
+const double eps = 1e-12;
+int solveEq(Vec<2, double>& A, Vec<1, double>& b, Vec<1, double>& x, bool alls=false) {
+	int n = A.size(), m = x.size(), rank = 0, br, bc;
+	vector<int> col(m); iota(begin(col), end(col), 0);
+	for(int i = 0; i < n; i++) {
+		double v, bv = 0;
+		for(int r = i; r < n; r++)
+			for(int c = i; c < n; c++)
+				if ((v = fabs(A[r][c])) > bv)
+					br = r, bc = c, bv = v;
+		if (bv <= eps) {
+			for(int j = i; j < n; j++)
+				if (fabs(b[j]) > eps)
+					return -1;
+			break;
+		}
+		swap(A[i], A[br]);
+		swap(b[i], b[br]);
+		swap(col[i], col[bc]);
+		for(int j = 0; j < n; j++)
+			swap(A[j][i], A[j][bc]);
+		bv = 1.0 / A[i][i];
+		for(int j = (alls)?0:i+1; j < n; j++) {
+			if (j != i) {
+				double fac = A[j][i] * bv;
+				b[j] -= fac * b[i];
+				for(int k = i+1; k < m; k++)
+					A[j][k] -= fac*A[i][k];
+			}
+		}
+		rank++;
+	}
+	if (alls) for (int i = 0; i < m; i++) x[i] = -DBL_MAX;
+	for (int i = rank; i--;) {
+		bool isGood = true;
+		if (alls)
+			for (int j = rank; isGood && j < m; j++)
+				if (fabs(A[i][j]) > eps)
+					isGood = false;
+		b[i] /= A[i][i];
+		if (isGood) x[col[i]] = b[i];
+		if (!alls)
+			for(int j = 0; j < i; j++)
+				b[j] -= A[j][i] * b[i];
+	}
+	return rank;
 }
