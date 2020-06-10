@@ -4,6 +4,14 @@ This repo contains various bits of code that can be used for competitive program
 
 C++ is the default language used here. This choice here is that C++ is usually the fastest language in common use for competitive programming, and that usually C++ can be translated into other languages while the opposite is not necessarily true. Sometimes unique features of C++ is used, but generally it can be converted to other languages without much hassle.
 
+## How to Contribute
+
+* create new snippets
+* improve existing snippets
+* write tests for existing snippets
+* add links to problems solvable by snippets
+* benchmark snippets against other methods
+
 ## Information
 
 ### Algorithms
