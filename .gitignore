@@ -12,3 +12,4 @@
 # ignore generated files
 *.exe
 testcase*.txt
+benchmark_*.txt
