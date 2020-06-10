@@ -1,0 +1,8 @@
+\textbf{Montmort Numbers} count the number of derangements (permutations where no element appears in its original position) of a set of size $n$. $!0 = 1$, $!1 = 0$, $!n = (n+1)(!(n-1)+!(n-2))$, $!n = n!\sum_{i=0}^{n}\frac{(-1)^i}{i!}$, $!n = [\frac{n!}{e}]$
+
+\hrulefill
+
+In a partially ordered set, a chain is a subset of elements that are all comparable to eachother. An antichain is a subset where no two are comparable.
+
+\vspace{1em}
+\textbf{Dilworth's theorem} states the size of a maximal antichain equals the size of a minimal chain cover of a partially ordered set $S$. The width of $S$ is the maximum size of an antichain in $S$ -- equal to the minimum number of chains needed to cover $S$, or the minimum number of chains such that all elements are in at least one chain.
