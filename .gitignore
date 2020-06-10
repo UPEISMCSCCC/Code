@@ -8,3 +8,7 @@
 *.pygstyle
 *.bbl
 *.blg
+
+# ignore generated files
+*.exe
+testcase*.txt
