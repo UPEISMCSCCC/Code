@@ -11,4 +11,17 @@ int main() {
 	s = "AbcDefGhi";
 	uppercase(s);
 	assert(s == "ABCDEFGHI");
+	
+	s = "abc";
+	trim(s);
+	assert (s == "abc");
+	s = "  abc";
+	trim(s);
+	assert (s == "abc");
+	s = "abc   ";
+	trim(s);
+	assert (s == "abc");
+	s = "   abc   ";
+	trim(s);
+	assert (s == "abc");
 }
