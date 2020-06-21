@@ -25,7 +25,7 @@ C++ is the default language used here. This choice here is that C++ is usually t
 
 * [Fenwick Tree](./snippets/data_structures/fenwick.cpp) - efficient structure for keeping track of and updating cumulative sums. Updates sums in `O(log n)`
 * [Hash Table](./snippets/data_structures/hashtable.cpp) - faster version of std::unordered_map
-* [Ordered Set](./snippets/data_structures/ordered_set.cpp) - version of std::set with array-like access methods
+* [Ordered Set](./snippets/data_structures/ordered_set.cpp) - version of std::set with array-like access methods, including map variant
 * [Rope](./snippets/data_structures/rope.cpp) - version of string, optimized for insertions/deletions at arbitrary points within the string.
 * [Trie](./snippets/data_structure/trie.cpp) - prefix tree, or a tree that stores strings based on common prefixes.
 
@@ -34,6 +34,8 @@ C++ is the default language used here. This choice here is that C++ is usually t
 * [Eulerian Path](./snippets/graph/eulerian_path.cpp) - find a path that visits each node exactly once, if it exists
 * [Minimum Spanning Tree](./snippets/graph/mst.cpp) - Primm's algorithm for generating the minimum spanning tree of a given graph and its weight
 * [Union Find](./snippets/graph/union_find.cpp) - determine subsets that nodes belong to
+* [Grid Shortcuts](./snippets/graph/grid.cpp) - utilities to make grid problems easier to tackle
+* [Floyd Warshall](./snippets/graph/floydwarshall.cpp) - all-pairs shortest path / transitive closure / negative cycle detection
 
 ### Math
 
