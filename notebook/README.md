@@ -42,4 +42,5 @@ TODO:
 - https://github.com/ngthanhtrung23/ACM_Notebook_new
 - https://github.com/bobogei81123/bcw_codebook
 - https://github.com/pin3da/Programming-contest
+- https://github.com/mostafa-saad/MyCompetitiveProgramming/blob/master/zz-algorthmic-resources/tutorial-links.txt
 - http://shygypsy.com/tools/
