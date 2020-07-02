@@ -1,5 +1,6 @@
 struct SuffixTree {
-	enum { N = 50000, ALPHA = 26 };
+	// n = 2*len+10 or so
+	enum { N = 50010, ALPHA = 26 };
 	int toi(char c) { return c - 'a'; }
 	int t[N][ALPHA],l[N],r[N],p[N],s[N],v=0,q=0,m=2;
 	string a;
