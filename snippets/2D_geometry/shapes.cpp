@@ -8,7 +8,7 @@ double cross(point a, point b) { return imag(conj(a)*b); }
 
 struct line { point a, b; };
 struct circle { point c; double r; };
-struct segment { point a, point b; };
+struct segment { point a, b; };
 struct triangle { point a, b, c; };
 struct rectangle { point tl, br; };
 
