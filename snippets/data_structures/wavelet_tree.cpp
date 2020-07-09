@@ -1,6 +1,7 @@
 using iter = vector<int>::iterator;
 struct WaveletTree {
 	Vec<2, int> C; int s;
+	// sigma = highest value + 1
 	WaveletTree(vector<int>& a, int sigma) : s(sigma), C(sigma*2, 0) {
 		build(a.begin(), a.end(), 0, s-1, 1);
 	}
