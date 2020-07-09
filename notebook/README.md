@@ -23,6 +23,7 @@ Because of this:
 
 Specific:
 - n-dimensional vectors: https://codeforces.com/blog/entry/76149
+- wavelet tree: https://github.com/nilehmann/wavelet-tree/blob/master/wavelet-tree.cpp
 
 TODO:
 - https://github.com/lzyrapx/algorithmic_template
