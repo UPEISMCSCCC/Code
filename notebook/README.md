@@ -24,6 +24,7 @@ Because of this:
 Specific:
 - n-dimensional vectors: https://codeforces.com/blog/entry/76149
 - wavelet tree: https://github.com/nilehmann/wavelet-tree/blob/master/wavelet-tree.cpp
+- compile-time prime sieve: https://codeforces.com/blog/entry/79941
 
 TODO:
 - https://github.com/lzyrapx/algorithmic_template
