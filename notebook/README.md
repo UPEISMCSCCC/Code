@@ -27,6 +27,7 @@ Specific:
 - compile-time prime sieve: https://codeforces.com/blog/entry/79941
 
 TODO:
+- https://github.com/Chillee/Algorithms
 - https://github.com/lzyrapx/algorithmic_template
 - https://github.com/kskun/OI-Templates
 - https://github.com/billyang2016/oi-template
@@ -46,3 +47,4 @@ TODO:
 - https://github.com/pin3da/Programming-contest
 - https://github.com/mostafa-saad/MyCompetitiveProgramming/blob/master/zz-algorthmic-resources/tutorial-links.txt
 - http://shygypsy.com/tools/
+- https://github.com/cheran-senthil/PyRival (python)
