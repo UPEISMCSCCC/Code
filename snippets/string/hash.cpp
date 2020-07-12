@@ -23,4 +23,7 @@ struct advHash {
 	ull del(int pos, int len) {
 		return v - wip[pos+len]*base[l-pos-len] + wip[pos]*base[l-pos-len];
 	}
+	ull substr(int pos, int len) {
+		return del(pos+len, (l-pos-len)) - wip[pos]*base[len];
+	}
 };
