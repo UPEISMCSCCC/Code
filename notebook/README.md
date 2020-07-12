@@ -19,6 +19,7 @@ Because of this:
 - https://github.com/SuprDewd/CompetitiveProgramming
 - https://github.com/foreverbell/acm-icpc-cheat-sheet
 - https://github.com/bqi343/USACO
+- https://github.com/mhunicken/icpc-team-notebook-el-vasito
 - https://cp-algorithms.com/
 
 Specific:
