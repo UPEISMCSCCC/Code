@@ -26,4 +26,14 @@ struct advHash {
 	ull substr(int pos, int len) {
 		return del(pos+len, (l-pos-len)) - wip[pos]*base[len];
 	}
+	ull replace(int pos, char c) {
+		return v - wip[pos+1]*base[l-pos-1] + ((c - 'a' + 1) + wip[pos] * HASHER)*base[l-pos-1];
+	}
+	ull replace(int pos, string s) {
+		// can't increase total string size
+		ull r = v - wip[pos+s.size()]*base[l-pos-s.size()], c = wip[pos];
+		for (int i = 0; i < s.size(); i++)
+			c = (s[i]-'a'+1) + c * HASHER;
+		return r + c * base[l-pos-s.size()];
+	}
 };
