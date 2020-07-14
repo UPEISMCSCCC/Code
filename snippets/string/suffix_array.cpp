@@ -25,4 +25,31 @@ struct SuffixArray {
 			for (k && k--, j = sa[rank[i] - 1];
 				 s[i + k] == s[j + k]; k++);
 	}
+	// smallest cyclic shift
+	int cyclic() { return sa[0]; }
+	// longest repeated substring
+	pair<int,int> lrs() {
+		int length = -1, index = -1;
+		for (int i = 0; i < lcp.size(); i++) {
+			if (lcp[i] > length) {
+				length = lcp[i];
+				index = sa[i];
+			}
+		}
+		return {index,length};
+	}
+	// count distinct substrings, excluding empty
+	int distincts() {
+		int n = sa.size() - 1, r = n - sa[0];
+		for (int i = 1; i < lcp.size(); i++)
+			r += (n - sa[i]) - lcp[i - 1];
+		return r;
+	}
+	// count repeated substrings, excluding empty
+	int repeateds() {
+	    int r = 0;
+		for (int i = 1; i < lcp.size(); i++)
+			r += max(lcp[i] - lcp[i-1], 0);
+		return r;
+	}
 };
