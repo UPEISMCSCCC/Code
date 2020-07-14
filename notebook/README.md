@@ -26,6 +26,7 @@ Specific:
 - n-dimensional vectors: https://codeforces.com/blog/entry/76149
 - wavelet tree: https://github.com/nilehmann/wavelet-tree/blob/master/wavelet-tree.cpp
 - compile-time prime sieve: https://codeforces.com/blog/entry/79941
+- smaller binary search: https://codeforces.com/blog/entry/9901
 
 TODO:
 - https://github.com/Chillee/Algorithms
