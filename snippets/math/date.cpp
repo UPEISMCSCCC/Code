@@ -13,7 +13,7 @@ pair<int,pair<int,int>> int2date(int x){
 	return {100*(n-49)+i+j/11, {j+2-12*(j/11), x-2447*j/80}};
 }
 int dayOfWeek(int y, int m, int d){	//0=sunday
-	static int cal[]={0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
+	static int cal[]={0,3,2,5,0,3,5,1,4,6,2,4};
 	y-=m<3;
 	return (y+y/4-y/100+y/400+cal[m-1]+d)%7;
 }
