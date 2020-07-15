@@ -19,3 +19,10 @@ def bootstrap(f, stack=[]):
 					to = stack[-1].send(to)
 			return to
 	return wrappedfunc
+	
+# EXAMPLE recursive fibonacci
+@bootstrap
+def f(n):
+	if (n < 2):
+		yield n
+	yield (yield f(n-1)) + (yield f(n-2))
