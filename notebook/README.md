@@ -21,12 +21,14 @@ Because of this:
 - https://github.com/bqi343/USACO
 - https://github.com/mhunicken/icpc-team-notebook-el-vasito
 - https://cp-algorithms.com/
+- https://github.com/cheran-senthil/PyRival
 
 Specific:
 - n-dimensional vectors: https://codeforces.com/blog/entry/76149
 - wavelet tree: https://github.com/nilehmann/wavelet-tree/blob/master/wavelet-tree.cpp
 - compile-time prime sieve: https://codeforces.com/blog/entry/79941
 - smaller binary search: https://codeforces.com/blog/entry/9901
+- python recursive limit bypass: https://codeforces.com/blog/entry/80158?#comment-662130
 
 TODO:
 - https://github.com/Chillee/Algorithms
@@ -49,4 +51,3 @@ TODO:
 - https://github.com/pin3da/Programming-contest
 - https://github.com/mostafa-saad/MyCompetitiveProgramming/blob/master/zz-algorthmic-resources/tutorial-links.txt
 - http://shygypsy.com/tools/
-- https://github.com/cheran-senthil/PyRival (python)
