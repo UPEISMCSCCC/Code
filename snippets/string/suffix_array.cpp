@@ -47,7 +47,7 @@ struct SuffixArray {
 	}
 	// count repeated substrings, excluding empty
 	int repeateds() {
-	    int r = 0;
+		int r = 0;
 		for (int i = 1; i < lcp.size(); i++)
 			r += max(lcp[i] - lcp[i-1], 0);
 		return r;
