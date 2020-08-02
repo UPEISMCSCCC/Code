@@ -4,7 +4,7 @@ This repo contains various bits of code that can be used for competitive program
 
 C++ is the default language used here. This choice here is that C++ is usually the fastest language in common use for competitive programming, and that usually C++ can be translated into other languages while the opposite is not necessarily true. Sometimes unique features of C++ is used, but generally it can be converted to other languages without much hassle.
 
-Included is an icpc style team notebook using the snippets, as well as some benchmarks and test cases for the snippets.
+Included is an ICPC style team notebook using the snippets, as well as some benchmarks and test cases for the snippets.
 
 ## How to Contribute
 
@@ -17,10 +17,11 @@ Included is an icpc style team notebook using the snippets, as well as some benc
 ## Information
 
 ### Algorithms
-
+* [Binary Search](./snippets/algorithm/binary_search.cpp) - Find the position of a target value within a sorted array.
+* [Golden Section Search](./snippets/algorithm/golden_section_search.cpp) - Find the minima or maxima of a function inside an interval. 
 * [Min/Max Subarray](./snippets/algorithm/minmax_subarray.cpp) - Find the maximum subarray given an array of integers. Same with minimum subarray.
 * [QuickSelect](./snippets/algorithm/quickselect.cpp) - Search for an element in an unsorted array, similar to a binary search but without the sorted restriction. Effectively performs quicksort, but only on the relevant subsections of the array. This does swap elements within the array and will alter the array's ordering.
-* [Saddleback Search](./snippets/algorithm/saddleback_seach.cpp) - given a 2D array sorted on both axis find if a value exists, and return its location.
+* [Saddleback Search](./snippets/algorithm/saddleback_seach.cpp) - Given a 2D array sorted on both axis, find if a value exists and return its location.
 * [Ternary Search](./snippets/algorithm/ternary_search.cpp) - Given a function, search for the minimum or maximum (or any other unimodal function) of a range. Will do so in `O(log3 n)` where `n` is the range being used.
 
 ### Data Structures
@@ -29,15 +30,19 @@ Included is an icpc style team notebook using the snippets, as well as some benc
 * [Hash Table](./snippets/data_structures/hashtable.cpp) - faster version of std::unordered_map
 * [Ordered Set](./snippets/data_structures/ordered_set.cpp) - version of std::set with array-like access methods, including map variant
 * [Rope](./snippets/data_structures/rope.cpp) - version of string, optimized for insertions/deletions at arbitrary points within the string.
+* [Segment Tree](./snippet/data_structures/segment_tree.cpp) - A tree for storing intervals, and allows for quick queries to find which interval contains a given point.
+* [Sparse Table](./snippet/data_structures/sparse_table.cpp) - Fast lookups for range min/max queries.
 * [Trie](./snippets/data_structure/trie.cpp) - prefix tree, or a tree that stores strings based on common prefixes.
+* [Wavelet Tree](./snippets/data_structure/wavelet_tree.cpp) - Store strings or suffix arrays in a compressed way
 
 ### Graph
-
-* [Eulerian Path](./snippets/graph/eulerian_path.cpp) - find a path that visits each node exactly once, if it exists
+* [Dijkstra's Algorithm](./snippets/graph/dijkstra.cpp) - Find the shortest path between two nodes in a graph.
+* [Eulerian Path](./snippets/graph/eulerian_path.cpp) - Find a path that visits each node exactly once, if it exists.
+* [Floyd Warshall](./snippets/graph/floydwarshall.cpp) - all-pairs shortest path / transitive closure / negative cycle detection.
+* [Grid Shortcuts](./snippets/graph/grid.cpp) - utilities to make grid problems easier to tackle
 * [Minimum Spanning Tree](./snippets/graph/mst.cpp) - Primm's algorithm for generating the minimum spanning tree of a given graph and its weight
 * [Union Find](./snippets/graph/union_find.cpp) - determine subsets that nodes belong to
-* [Grid Shortcuts](./snippets/graph/grid.cpp) - utilities to make grid problems easier to tackle
-* [Floyd Warshall](./snippets/graph/floydwarshall.cpp) - all-pairs shortest path / transitive closure / negative cycle detection
+
 
 ### Math
 
@@ -82,3 +87,8 @@ Included is an icpc style team notebook using the snippets, as well as some benc
 * [Basics](./snippets/2D_geometry/shapes.cpp) - basic declarations of various shapes and methods
 * [Intersections](./snippets/2D_geometry/intersection.cpp) - various intersection calculations
 * [Convex Hull](./snippets/2D_geometry/convexhull.cpp) - get the `convex_polygon` from a simple polygon
+
+### 3D Geometry
+
+* [Basics](./snippets/3D_geometry/shapes.cpp) - basic declarations of various shapes and methods
+
