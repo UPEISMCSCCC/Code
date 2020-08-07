@@ -2,7 +2,7 @@
 // graph[i] = vector of edges incident to vertex i
 // places total weight of the mst in &total
 // if returned vector has size != n-1, there is no MST
-vector<edge> mst(vector<vector<edge>> graph, ll &total) {
+vector<edge> mst(Vec<2, edge> graph, ll &total) {
 	total = 0;
 	priority_queue<edge, vector<edge>, greater<edge>> pq;
 	vector<edge> MST;
