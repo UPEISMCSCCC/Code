@@ -43,10 +43,8 @@ int max_colinear_points(vector<pair<T,T>> &points) {
     unordered_map<Slope, int> counter;
     for(int i=0;i<points.size();i++) {
         for(int j=i+1;j<points.size();j++) {
-            if(i!=j) {
-                Slope slope(points[i].second-points[j].second,points[i].first-points[j].first);
-                best = max(best, ++counter[slope]+1);
-            }
+            Slope slope(points[i].second-points[j].second,points[i].first-points[j].first);
+            best = max(best, ++counter[slope]+1);
         }
         if(i != points.size()-1) counter.clear();
     }
