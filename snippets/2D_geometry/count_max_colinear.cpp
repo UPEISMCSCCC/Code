@@ -1,5 +1,5 @@
-typedef long long T;
-const T range = 10000;
+#define ll long long
+const ll range = 10000;
 
 /*
 given N points with coordinates in [-range, range]
@@ -10,14 +10,14 @@ Solves https://open.kattis.com/problems/maxcolinear in 0.62s (not amazing)
 */
 
 struct Slope { // a rational number with unsigned infinity (1,0)
-    T p, q;
+    ll p, q;
     
-    Slope(T pP=T(), T qP=T()) {
+    Slope(ll pP=0, ll qP=0) {
         if(qP==0) {
             p = 1, q = 0;
             return;
         }
-        T g = __gcd(pP, qP);
+        ll g = __gcd(pP, qP);
         pP /= g, qP /= g;
         if(qP < 0) pP *= -1, qP *= -1;
         p = pP, q = qP;
@@ -37,7 +37,7 @@ namespace std {
     };
 }
 
-int max_colinear_points(vector<pair<T,T>> &points) {
+int max_colinear_points(vector<pair<ll,ll>> &points) {
     if(points.size() <= 2) return points.size();
     int best = 0;
     unordered_map<Slope, int> counter;
