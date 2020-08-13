@@ -40,6 +40,7 @@ TODO:
 - https://github.com/erfaniaa/doggy-sweat-cheatsheet
 - https://github.com/likecs/Competitive-Coding
 - https://github.com/ADJA/algos
+- https://github.com/TimonKnigge/TCR
 - https://github.com/xdanielsb/MarathonBook
 - https://github.com/xdanielsb/Notebook
 - https://github.com/asmaurya95/Competitive-Programming
