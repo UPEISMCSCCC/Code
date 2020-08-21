@@ -39,9 +39,7 @@ struct BridgeGraph {
     
     void findBridges() {
         vb visited(V, false);
-        vi disc(V);
-        vi low(V);
-        vi parent(V,-1);
+        vi disc(V), low(V), parent(V,-1);
         for (int i = 0; i < V; i++)
             if(!visited[i])
                 bridgeUtil(i, visited, disc, low, parent);
