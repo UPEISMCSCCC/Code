@@ -52,4 +52,14 @@ struct SuffixArray {
 			r += max(lcp[i] - lcp[i-1], 0);
 		return r;
 	}
+	// burrows wheeler transform
+	// sa needs to be sa(s + s), ds = s+s too
+	string bwt(string& ds) {
+		int n = ds.size();
+		string toret;
+		for (int i = 0; i < n; i++)
+			if (sa[i+1] < n/2)
+				toret += ds[sa[i+1] + n/2 - 1];
+		return toret;
+	}
 };
