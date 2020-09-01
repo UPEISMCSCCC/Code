@@ -5,7 +5,7 @@ ostream& operator<<(ostream& o, unsigned __int128 n) {
 	return o;
 }
 ostream& operator<<(ostream& o, __int128 n) {
-	if (n < 0) return o << '-' << (unsigned __int128)n;
+	if (n < 0) return o << '-' << (unsigned __int128)(-n);
 	return o << (unsigned __int128)n;
 }
 ostream& operator<<(ostream& o, __float128 n) {
