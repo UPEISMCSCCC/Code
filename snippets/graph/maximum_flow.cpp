@@ -40,7 +40,7 @@ struct MaxFlowGraph {
     ll dfs(ll v, ll pushed) {
         if (pushed == 0 || v == t)
             return pushed;
-        for (ll cid=ptr[v];cid<adj[v].size();cid++) {
+        for (ll &cid=ptr[v];cid<adj[v].size();cid++) {
             ll id = adj[v][cid], u = edges[id].u;
             if (level[v] + 1 != level[u] || edges[id].cap - edges[id].flow < 1)
                 continue;
