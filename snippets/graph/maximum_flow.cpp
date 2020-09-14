@@ -6,7 +6,8 @@ struct FlowEdge {
 
 // taken from https://cp-algorithms.com/graph/dinic.html
 // modified for use by us
-// solves the maximum flow problem in O(V^2 * E) time
+// solves the maximum flow problem in O(V^2 * E) time (faster than it sounds usually)
+// solves min cut with similar time complexity (overhead proportional to V+E)
 struct MaxFlowGraph {
     const ll flow_inf = INT_MAX;
     vector<FlowEdge> edges;
