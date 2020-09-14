@@ -73,4 +73,30 @@ struct MaxFlowGraph {
         }
         return {f,flow_edges};
     }
+    
+    // helper for min_cut, find vertices reachable
+    // from s in the final residual graph
+    void _dfs_reachable(ll x, vector<bool> &visited) {
+        visited[x] = true;
+        for(ll cid : adj[x]) {
+            ll u = edges[cid].u;
+            if(!visited[u] && edges[cid].flow < edges[cid].cap) {
+                _dfs_reachable(u, visited);
+            }
+        }
+    }
+    
+    // returns {min_cut_weight, vertices_in_S}
+    // min cut is a partition (S,T) of vertex set
+    // so weight of edges from S to T is minimized
+    pair<ll,vector<ll>> min_cut() {
+        auto f = flow();
+        ll max_flow_val = f.first;
+        vector<bool> visited(n, false);
+        _dfs_reachable(s, visited);
+        vector<ll> ans;
+        for(int i=0;i<n;i++)
+            if(visited[i]) ans.push_back(i);
+        return {max_flow_val, ans};
+    }
 };
