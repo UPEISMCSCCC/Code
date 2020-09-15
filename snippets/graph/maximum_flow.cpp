@@ -1,3 +1,39 @@
+/* SPECIAL CASES REQUIRING GRAPH MODIFICATION
+   NOTE many of theses applications decrease the time complexity
+   (e.g. Bipartite reduces to sqrt(V)*E)
+   TODO maybe make these there own snippets
+
+- multi-source, multi-sink
+  let s1, ... sn and t1, ..., tm be the sources and sinks
+  make a new node s, and add s->si edges with inf capacity
+  make a new node t, and add ti->t edges with inf capacity
+  then run as usual
+
+- maximum cardinality bipartite matching
+  given BPG with X,Y bipartition and E edge set
+  make a network graph with V = XuYu{s,t}
+  E' = {all edges in original}u{(s,x):x in X}u{(y,t):y in Y}
+  set capacity(e)=1 for each e in E', then run flow.
+  edges in matching are those with flow 1 which exist in original graph
+
+- minimum path cover (min # of vertex-disjoint paths to cover a DAG)
+  given G(V,E) (a DAG), let Vin = {v in V: v has positive indegree}
+  and Vout = {v in V: v has positive outdegree}. Let E' be edges
+  (u,v) in E so u in Vout and v in Vin. Let G' = (Vin u Vout, E')
+  running bipartite on G' gives the min #.
+
+- max flow with vertex capacities
+  instead of just limiting flow on each edge, suppose we have c(v)>=0
+  for each vertex (not the source or sink),
+  so the flow through v must be <= c(v).
+  transform each v into two nodes: vin and vout
+  make all edges (u,v) instead (u,vin)
+  and all edges (v,u) instead (vout, u)
+  and finally make an edge (vin,vout) with capacity c(v)
+*/
+
+// each edge has a capacity and a flow
+// flow must be <= capacity
 struct FlowEdge {
     ll v, u, cap, flow = 0; // capacity, flow
     FlowEdge(ll v, ll u, ll cap) : v(v), u(u), cap(cap) 
