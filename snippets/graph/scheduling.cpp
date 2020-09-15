@@ -32,7 +32,7 @@ pair<bool, umap<ll, vector<ll>>> check_schedule(unordered_map<ll, vector<ll>> &p
     }
     pair<ll, vector<FlowEdge>> soln = G.flow();
     if(soln.first != needed_per_day*n_days) return {false, {}};
-    umap<ll, vector<ll>> schedule;
+    unordered_map<ll, vector<ll>> schedule;
     for(const auto &fe : soln.second) {
         if(fe.v != s && fe.u != t) { // is an edge from a person to a day
             schedule[fe.u - n_people + 1].push_back(fe.v);
