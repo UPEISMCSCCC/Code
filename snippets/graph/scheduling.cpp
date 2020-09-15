@@ -14,7 +14,7 @@
 // solves https://open.kattis.com/problems/dutyscheduler in 0.00s
 // to solve dutyscheduler, repeatedly call the method with increasing max_per_person (1,2,...) until a solution is found
 
-pair<bool, umap<ll, vector<ll>>> check_schedule(umap<ll, vector<ll>> &possibles, ll needed_per_day, ll n_days, ll max_per_person) {
+pair<bool, umap<ll, vector<ll>>> check_schedule(unordered_map<ll, vector<ll>> &possibles, ll needed_per_day, ll n_days, ll max_per_person) {
     ll n_people = possibles.size();
     ll n_nodes = n_people + n_days + 2;
     ll s = n_nodes-2, t = n_nodes-1;
