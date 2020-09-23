@@ -11,25 +11,25 @@
 typedef complex<int> P;
 vector<edge> manhattanMST(vector<P> ps) {
     vector<int> id(ps.size());
-	  iota(id.begin(), id.end(), 0);
-	  vector<edge> edges;
+    iota(id.begin(), id.end(), 0);
+    vector<edge> edges;
     const auto cmp = [&](int i, int j) {return real(ps[i]-ps[j])<imag(ps[j]-ps[i]);};
-	  for(int k=0;k<4;k++) {
-		    sort(id.begin(), id.end(), cmp);
-		    map<int, int> sweep;
-		    for (int i : id) {
+    for(int k=0;k<4;k++) {
+        sort(id.begin(), id.end(), cmp);
+        map<int, int> sweep;
+        for (int i : id) {
             auto it=sweep.lower_bound(-imag(ps[i]));
-			      for (;it!=sweep.end();sweep.erase(it++)) {
-				        int j = it->second;
-				         P d = ps[i]-ps[j];
-				        if (imag(d) > real(d)) break;
-				        edges.push_back({i, j, imag(d) + real(d)});
-			      }
-			      sweep[-imag(ps[i])] = i;
-		    }
-		    for (P& p : ps)
+            for (;it!=sweep.end();sweep.erase(it++)) {
+                int j = it->second;
+                P d = ps[i]-ps[j];
+                if (imag(d) > real(d)) break;
+                edges.push_back({i, j, imag(d) + real(d)});
+            }
+            sweep[-imag(ps[i])] = i;
+        }
+        for (P& p : ps)
             if(k%2!=0) p = P(-real(p), imag(p));
             else p = P(imag(p), real(p));
     }
-	  return edges;
+    return edges;
 }
