@@ -26,14 +26,22 @@ string lcs(string a, string b) {
 }
 
 #define T int
-// X and Y are permutations
-// special case where we can do NlogN using lis algorithm
+// for two vectors X and Y, each of *unique* elements, finds the length of LCS of the
+// sequences obtained by removing any uncommon elements of the two vectors
+// is a special case where we can reduce to NlogN using lis algorithm
 // solves https://open.kattis.com/problems/princeandprincess
 int lcs_of_permutations(vector<T> &X, vector<T> &Y) {
+    unordered_set<T> sx, sy;
+    for(T t : X) sx.insert(t);
+    vector<T> new_x, new_y;
+    for(T t : Y) if(sx.count(t))
+        sy.insert(t), new_y.push_back(t);
+    for(T t : X) if(sy.count(t))
+        new_x.push_back(t);
     unordered_map<T, int> mm;
-    int n = X.size();
-    vector<T> new_y(n);
-    for(int i=0;i<n;i++) mm[X[i]] = i;
-    for(int i=0;i<n;i++) new_y[i] = mm[Y[i]];
-    return lis(new_y);
+    int n = new_x.size();
+    vector<T> ans(n);
+    for(int i=0;i<n;i++) mm[new_x[i]] = i;
+    for(int i=0;i<n;i++) ans[i] = mm[new_y[i]];
+    return lis(ans);
 }
