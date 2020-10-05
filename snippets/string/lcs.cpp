@@ -24,3 +24,16 @@ string lcs(string a, string b) {
 	
 	return out;
 }
+
+#define T int
+// X and Y are permutations
+// special case where we can do NlogN using lis algorithm
+// solves https://open.kattis.com/problems/princeandprincess
+int lcs_of_permutations(vector<T> &X, vector<T> &Y) {
+    unordered_map<T, int> mm;
+    int n = X.size();
+    vector<T> new_y(n);
+    for(int i=0;i<n;i++) mm[X[i]] = i;
+    for(int i=0;i<n;i++) new_y[i] = mm[Y[i]];
+    return lis(new_y);
+}
