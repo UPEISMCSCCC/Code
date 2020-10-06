@@ -24,3 +24,17 @@ string lcs(string a, string b) {
 	
 	return out;
 }
+
+// memory-efficient variant if you don't need reconstruction
+int lcs_compressed(vector<int>& a, vector<int>& b) {
+    int m = a.size(), n = b.size(), bi, L[2][n + 1];
+    for (int i = 0; i <= m; i++)  {
+        bi = i & 1;
+        for (int j = 0; j <= n; j++)  { 
+            if (i == 0 || j == 0)  L[bi][j] = 0; 
+            else if (a[i-1] == b[j-1]) L[bi][j] = L[1 - bi][j - 1] + 1; 
+            else L[bi][j] = max(L[1 - bi][j], L[bi][j - 1]); 
+        } 
+    }
+    return L[bi][n]; 
+} 
