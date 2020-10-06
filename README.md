@@ -43,7 +43,6 @@ Included is an ICPC style team notebook using the snippets, as well as some benc
 * [Minimum Spanning Tree](./snippets/graph/mst.cpp) - Primm's algorithm for generating the minimum spanning tree of a given graph and its weight
 * [Union Find](./snippets/graph/union_find.cpp) - determine subsets that nodes belong to
 
-
 ### Math
 
 * [Catalan](./snippets/math/catalan.cpp) - generate the catalan numbers under a modulus
@@ -87,6 +86,7 @@ Included is an ICPC style team notebook using the snippets, as well as some benc
 * [Basics](./snippets/2D_geometry/shapes.cpp) - basic declarations of various shapes and methods
 * [Intersections](./snippets/2D_geometry/intersection.cpp) - various intersection calculations
 * [Convex Hull](./snippets/2D_geometry/convexhull.cpp) - get the `convex_polygon` from a simple polygon
+* [Counting Colinear Points](./snippets/2D_geometry/count_max_colinear.cpp) - counting the maximum number of colinear points
 
 ### 3D Geometry
 

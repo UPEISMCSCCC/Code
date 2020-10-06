@@ -10,6 +10,6 @@ void uf_union(subset* s, int x, int y) {
 	else s[yp].p = xp, s[xp].rank++, s[xp].sz += s[yp].sz;
 }
 
-void uf_size(subset *s, int i) {
+int uf_size(subset *s, int i) {
 	return s[uf_find(s, i)].sz;
 }
