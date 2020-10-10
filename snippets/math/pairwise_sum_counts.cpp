@@ -27,6 +27,7 @@ ll count_ways(vector<ll> &a, vector<ll> &b, vector<ll> &c) {
 // number of ways two things from A can add to get something in A
 // i.e. pairs (i,j,k) so A[i]+A[j] = A[k] where i,j,k distinct.
 // assumes all elements are in [-OFFSET, OFFSET]
+// solves https://open.kattis.com/problems/aplusb
 ll count_ways_1v(vector<ll> &Ap) {
     unordered_map<ll,ll> Amap;
     for(ll x : Ap) Amap[x]++;
