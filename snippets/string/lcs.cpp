@@ -27,16 +27,16 @@ string lcs(string a, string b) {
 
 // memory-efficient variant if you don't need reconstruction
 int lcs_compressed(vector<int>& a, vector<int>& b) {
-    int m = a.size(), n = b.size(), bi, L[2][n + 1];
-    for (int i = 0; i <= m; i++)  {
-        bi = i & 1;
-        for (int j = 0; j <= n; j++)  { 
-            if (i == 0 || j == 0)  L[bi][j] = 0; 
-            else if (a[i-1] == b[j-1]) L[bi][j] = L[1 - bi][j - 1] + 1; 
-            else L[bi][j] = max(L[1 - bi][j], L[bi][j - 1]); 
-        } 
-    }
-    return L[bi][n]; 
+	int m = a.size(), n = b.size(), bi, L[2][n + 1];
+	for (int i = 0; i <= m; i++)  {
+		bi = i & 1;
+		for (int j = 0; j <= n; j++)  { 
+			if (i == 0 || j == 0)  L[bi][j] = 0; 
+			else if (a[i-1] == b[j-1]) L[bi][j] = L[1 - bi][j - 1] + 1; 
+			else L[bi][j] = max(L[1 - bi][j], L[bi][j - 1]); 
+		} 
+	}
+	return L[bi][n]; 
 }
 
 #define T int
@@ -45,17 +45,17 @@ int lcs_compressed(vector<int>& a, vector<int>& b) {
 // is a special case where we can reduce to NlogN using lis algorithm
 // solves https://open.kattis.com/problems/princeandprincess
 int lcs_of_permutations(vector<T> &X, vector<T> &Y) {
-    unordered_set<T> sx, sy;
-    for(T t : X) sx.insert(t);
-    vector<T> new_x, new_y;
-    for(T t : Y) if(sx.count(t))
-        sy.insert(t), new_y.push_back(t);
-    for(T t : X) if(sy.count(t))
-        new_x.push_back(t);
-    unordered_map<T, int> mm;
-    int n = new_x.size();
-    vector<T> ans(n);
-    for(int i=0;i<n;i++) mm[new_x[i]] = i;
-    for(int i=0;i<n;i++) ans[i] = mm[new_y[i]];
-    return lis(ans);
+	unordered_set<T> sx, sy;
+	for(T t : X) sx.insert(t);
+	vector<T> new_x, new_y;
+	for(T t : Y) if(sx.count(t))
+		sy.insert(t), new_y.push_back(t);
+	for(T t : X) if(sy.count(t))
+		new_x.push_back(t);
+	unordered_map<T, int> mm;
+	int n = new_x.size();
+	vector<T> ans(n);
+	for(int i=0;i<n;i++) mm[new_x[i]] = i;
+	for(int i=0;i<n;i++) ans[i] = mm[new_y[i]];
+	return lis(ans);
 }
