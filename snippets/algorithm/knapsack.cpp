@@ -3,7 +3,7 @@
 // given n items with weights wt[i] and values val[i]
 // chooses a subset of items with maximal value sum and weight sum <=W
 // uses O(nW) time and space; wt==val is a subset sum problem
-// returns vec of indices of chosen items
+// returns vec of indices of chosen items and last element equalling value collected
 vector<ll> knapSack(int W, vector<int> &wt, vector<int> &val, int n) {
    int i, w; 
    int K[n+1][W+1];
