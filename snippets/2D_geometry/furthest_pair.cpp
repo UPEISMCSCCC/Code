@@ -1,3 +1,6 @@
+#define sq(a) ((a)*(a))
+double dist2(point a) { return sq(real(a))+sq(imag(a)); }
+
 // returns diameter (max pairwise distance) of points on a convex hull.
 // needs that all points are distinct and none are collinear
 // takes time linear in the size of the hull
