@@ -31,6 +31,7 @@ Specific:
 - python recursive limit bypass: https://codeforces.com/blog/entry/80158?#comment-662130
 - kth root: https://judge.yosupo.jp/submission/1644
 - reverse binomial: https://math.stackexchange.com/questions/103377/how-to-reverse-the-n-choose-k-formula
+- exact cover: https://www.cs.mcgill.ca/~aassaf9/python/algorithm_x.html
 
 TODO:
 - https://github.com/Chillee/Algorithms
