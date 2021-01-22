@@ -4,8 +4,7 @@ const int MAXC = 256;
 const int OFFC = 0;
 
 struct aho_corasick {
-	struct state
-	{
+	struct state {
 		set<pair<int, int>> out;
 		int fail; vector<int> go;
 		state() : fail(-1), go(MAXC, -1) {}
@@ -55,8 +54,7 @@ struct aho_corasick {
 	}
 	
 	// list of {start pos, pattern id}
-	vector<pair<int, int>> search(string text)
-	{
+	vector<pair<int, int>> search(string text) {
 		vector<pair<int, int>> toret;
 		int cur = 0;
 	  
