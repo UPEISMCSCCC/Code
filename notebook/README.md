@@ -55,3 +55,4 @@ TODO:
 - https://github.com/pin3da/Programming-contest
 - https://github.com/mostafa-saad/MyCompetitiveProgramming/blob/master/zz-algorthmic-resources/tutorial-links.txt
 - http://shygypsy.com/tools/
+- https://github.com/RamchandraApte/OmniTemplate
