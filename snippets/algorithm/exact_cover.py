@@ -37,5 +37,5 @@ def exact_cover(x, subsets, getall = False):
 # example
 X = {1, 2, 3}
 Y = {'a':[1], 'b':[2], 'c':[1,2,3], 'd':[2,3], 'e':[1]}
-print(exact_cover(X, Y)) # print any valid answer
-print(exact_cover(X, Y, True)) # print all answers
+print(exact_cover(X, Y)) # print an answer
+print(exact_cover(X, Y, True)) # print all
